@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>Koroshiya</string>
+	<key>bundleUUID</key>
+	<string>0F24FCF1-6543-4CC6-8B33-2EAED401FE3D</string>
+	<key>comment</key>
+	<string>To make RenpyLanguage the default for Renpy files, open a .rpy file and select View|Syntax|Open all with current extension as...|RenpyLanguage.</string>
+	<key>fileTypes</key>
+	<array>
+		<string>rpy</string>
+	</array>
+	<key>firstLineMatch</key>
+	<string>^#!/.*\bpython[0-9.-]*\b</string>
+	<key>foldingStartMarker</key>
+	<string>^\s*(def|class)\s+([.a-zA-Z0-9_ &lt;]+)\s*(\((.*)\))?\s*:|\{\s*$|\(\s*$|\[\s*$|^\s*"""(?=.)(?!.*""")</string>
+	<key>foldingStopMarker</key>
+	<string>^\s*$|^\s*\}|^\s*\]|^\s*\)|^\s*"""\s*$</string>
+	<key>keyEquivalent</key>
+	<string>^~P</string>
+	<key>name</key>
+	<string>RenpyLanguage</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>renpy keywords</string>
+			<key>match</key>
+			<string>\b(at|label|init|nvl|scene|show|hide|screen|stop|play|define|image|voice|call|jump|menu|imagemap|hotspot|text|add|key|use|bar|with|zorder|style|is|button|window|hbox|vbox|mousearea|imagebutton|config|python|music|sound|pause|transform|dissolve|fade|position|ui|store|renpy|theme|expression|as|behind|layer|onlayer)\b</string>
+			<key>name</key>
+			<string>keyword.control.flow.renpy</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>renpy screen keywords</string>
+			<key>match</key>
+			<string>\b(color|size|xpos|ypos|xanchor|yanchor|action|area|hovered|unhovered|xalign|yalign|idle|hover|ground|alpha|python|clicked|modal|text_style|default|spacing|yminimum|xminimum|ymaximum|xmaximum|yoffset|xoffset|has|who|what|tag|pos|value|id|auto|cache|alt|side|viewport|mousewheel|draggable|fadein|fadeout|ease|easein|easeout|time|align|xalign|yalign|zoom|child_size)\b</string>
+			<key>name</key>
+			<string>variable.parameter.function.language.python</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>renpy methods</string>
+			<key>match</key>
+			<string>\b(Character|DynamicCharacter|Pause|Dissolve|Fade|Position|At|Text|Hide|Jump|NullAction|Return|ShowTransient|SetDict|SetField|SetScreenVariable|SetVariable|ToggleDict|ToggleField|ToggleScreenVariable|ToggleVariable|MainMenu|Quit|ShowMenu|Start|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|QuickLoad|QuickSave|Play|Queue|SetMixer|Stop|Function|Help|HideInterface|If|InvertSelected|MouseMove|Notify|OpenURL|RollForward|Rollback|Screenshot|SelectedIf|SensitiveIf|Skip|With|AnimatedValue|DictValue|FieldValue|MixerValue|StaticValue|VariableValue|XScrollValue|YScrollValue|Preference|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|SideImage|Tooltip|Action|Gallery|LiveComposite|Movie)\b</string>
+			<key>name</key>
+			<string>support.function.builtin.python</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.python</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.renpython</string>
+	<key>uuid</key>
+	<string>11B0273F-0284-4483-B17B-4B8D0A9294CD</string>
+</dict>
+</plist>
