@@ -26,25 +26,41 @@
 	<array>
 		<dict>
 			<key>comment</key>
-			<string>renpy keywords</string>
+			<string>renpy transform keywords</string>
 			<key>match</key>
-			<string>\b(at|label|init|nvl|scene|show|hide|screen|stop|play|define|image|voice|call|jump|menu|imagemap|hotspot|text|add|key|use|bar|with|zorder|style|is|button|window|hbox|vbox|mousearea|imagebutton|config|python|music|sound|pause|transform|dissolve|fade|position|ui|store|renpy|theme|expression|as|behind|layer|onlayer)\b</string>
+			<string>\b(fade|dissolve|pixellate|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|ease|easeinright|easeinleft|easeintop|easeinbottom|easeoutright|easeoutleft|easeouttop|easeoutbottom|zoomin|zoomout|zoominout|vpunch|hpunch|blinds|squares|wipeleft|wiperight|wipeup|wipedown|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|irisin|repeat|transform|fadein|fadeout|position|Position|easein|easeout|time|align|xalign|yalign|ui)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>renpy screen keywords</string>
+			<string>renpy transform properties</string>
 			<key>match</key>
-			<string>\b(color|size|xpos|ypos|xanchor|yanchor|action|area|hovered|unhovered|xalign|yalign|idle|hover|ground|alpha|python|clicked|modal|text_style|default|spacing|yminimum|xminimum|ymaximum|xmaximum|yoffset|xoffset|has|who|what|tag|pos|value|id|auto|cache|alt|side|viewport|mousewheel|draggable|fadein|fadeout|ease|easein|easeout|time|align|xalign|yalign|zoom|child_size)\b</string>
+			<string>\b(pos|xpos|ypos|anchor|xanchor|yanchor|align|xalign|yalign|xoffset|yoffset|xcenter|ycenter|rotate|rotate_pad|transform_anchor|zoom|xzoom|yzoom|nearest|alpha|additive|around|alignaround|angle|radius|crop|crop_relative|corner1|corner2|size|subpixel|delay|events|kind|color|action|area|hovered|unhovered|idle|hover|ground|python|clicked|modal|text_style|default|spacing|yminimum|xminimum|ymaximum|xmaximum|has|who|what|tag|value|theme)\b</string>
 			<key>name</key>
 			<string>variable.parameter.function.language.python</string>
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>renpy show statement keywords</string>
+			<key>match</key>
+			<string>\b(as|at|behind|onlayer|zorder|expression|music|sound|movie|pause|clear|hide|show|scene|image)\b</string>
+			<key>name</key>
+			<string>keyword.control.flow.renpy</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>renpy python keywords</string>
+			<key>match</key>
+			<string>\b(python|renpy|store|init|define)\b</string>
+			<key>name</key>
+			<string>keyword.control.flow.renpy</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>renpy methods</string>
 			<key>match</key>
-			<string>\b(Character|DynamicCharacter|Pause|Dissolve|Fade|Position|At|Text|Hide|Jump|NullAction|Return|ShowTransient|SetDict|SetField|SetScreenVariable|SetVariable|ToggleDict|ToggleField|ToggleScreenVariable|ToggleVariable|MainMenu|Quit|ShowMenu|Start|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|QuickLoad|QuickSave|Play|Queue|SetMixer|Stop|Function|Help|HideInterface|If|InvertSelected|MouseMove|Notify|OpenURL|RollForward|Rollback|Screenshot|SelectedIf|SensitiveIf|Skip|With|AnimatedValue|DictValue|FieldValue|MixerValue|StaticValue|VariableValue|XScrollValue|YScrollValue|Preference|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|SideImage|Tooltip|Action|Gallery|LiveComposite|Movie)\b</string>
+			<string>\b(Character|DynamicCharacter|Pause|Dissolve|Fade|Position|At|Text|Hide|Jump|NullAction|Return|ShowTransient|SetDict|SetField|SetScreenVariable|SetVariable|ToggleDict|ToggleField|ToggleScreenVariable|ToggleVariable|MainMenu|Quit|ShowMenu|Start|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|QuickLoad|QuickSave|Play|Queue|SetMixer|Stop|Function|Help|HideInterface|If|InvertSelected|MouseMove|Notify|OpenURL|RollForward|Rollback|Screenshot|SelectedIf|SensitiveIf|Skip|With|AnimatedValue|DictValue|FieldValue|MixerValue|StaticValue|VariableValue|XScrollValue|YScrollValue|Preference|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|SideImage|Tooltip|Action|Gallery|LiveComposite|Movie|Transform)\b</string>
 			<key>name</key>
 			<string>support.function.builtin.python</string>
 		</dict>
