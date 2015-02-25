@@ -52,7 +52,7 @@
 			<key>comment</key>
 			<string>renpy python keywords</string>
 			<key>match</key>
-			<string>\b(python|renpy|store|init|define)\b</string>
+			<string>\b(python|renpy|store|init|define|jump|label)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
@@ -70,7 +70,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.renpython</string>
+	<string>source.python.renpy</string>
 	<key>uuid</key>
 	<string>11B0273F-0284-4483-B17B-4B8D0A9294CD</string>
 </dict>

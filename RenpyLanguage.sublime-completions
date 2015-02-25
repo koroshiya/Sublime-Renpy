@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpython",
+   "scope": "source.python.renpy",
    "completions":
    [
       { "trigger": "copy_images", "contents": "copy_images(old=$0, new=None)" },
@@ -114,6 +114,9 @@
       { "trigger": "VariableValue", "contents": "VariableValue(variable=$0, range=, max_is_zero=False, style='bar', offset=0, step=None)" },
       { "trigger": "With", "contents": "With(transition=$0)" },
       { "trigger": "XScrollValue", "contents": "XScrollValue(viewport=$0)" },
-      { "trigger": "YScrollValue", "contents": "YScrollValue(viewport=$0)" }
+      { "trigger": "YScrollValue", "contents": "YScrollValue(viewport=$0)" },
+
+      { "trigger": "menu", "contents": "menu:\n\t'$0'\n\n\t'Choice 1':\n\n\t\tpass\n\n\t'Choice 2':\n\n\t\tpass" },
+      { "trigger": "label", "contents": "label $0:\n\n\tpass" }
    ]
 }
