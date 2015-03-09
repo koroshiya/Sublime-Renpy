@@ -116,7 +116,7 @@
       { "trigger": "XScrollValue", "contents": "XScrollValue(viewport=$0)" },
       { "trigger": "YScrollValue", "contents": "YScrollValue(viewport=$0)" },
 
-      { "trigger": "menu", "contents": "menu:\n\t'$0'\n\n\t'Choice 1':\n\n\t\tpass\n\n\t'Choice 2':\n\n\t\tpass" },
+      { "trigger": "menu", "contents": "menu:\n\t\"$0\"\n\n\t\"Choice 1\":\n\n\t\tpass\n\n\t\"Choice 2\":\n\n\t\tpass" },
       { "trigger": "label", "contents": "label $0:\n\n\tpass" }
    ]
 }

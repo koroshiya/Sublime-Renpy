@@ -1,0 +1,11 @@
+Sublime Renpy v1.0.2
+======================
+
+This update adds support for auto-indentation of lines ending with colons.
+Previously, only Python-specific statements were recognized, such as if statements.
+Rather than adding keywords, Sublime Renpy now overrides this behavior for
+any line ending with a colon. This was done with ATL syntax and menu choices in mind.
+
+Also, the autocompletion for menu was changed to use quotation marks instead
+of apostrophes. This is because apostrophes are far more likely to appear
+within a menu choice, so not having to escape them makes more sense.
