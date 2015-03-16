@@ -1,0 +1,10 @@
+Sublime Renpy v1.0.3
+======================
+
+This update makes any document using RenpyLanguage
+use spaces instead of tabs. ie. Hitting the tab key
+will now enter a certain number of spaces (usually 4)
+instead.
+
+As you probably already know, this is because Renpy
+doesn't allow tabs within rpy documents.
