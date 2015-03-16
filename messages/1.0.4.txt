@@ -1,0 +1,8 @@
+Sublime Renpy v1.0.4
+======================
+
+This update adds a significant number of new properties
+to highlight, as well as a few new keywords.
+This includes the dollar sign (as long as it's the
+first character on the line) and hundreds of lesser-used
+properties.
