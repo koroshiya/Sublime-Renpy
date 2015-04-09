@@ -1,0 +1,11 @@
+Sublime Renpy v1.0.5
+======================
+
+This update resolves a dollar sign issue where
+the dollar sign was not highlighted if there are
+only spaces before it. Additionally, block quotes
+are now correctly highlighted, as is the case with 
+text editor syntax files that Ren'Py provides.
+
+~Courtesy of Nolanlemahn, still graciously released
+under The MIT License.

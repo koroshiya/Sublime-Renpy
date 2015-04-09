@@ -10,7 +10,8 @@
 	<string>To make RenpyLanguage the default for Renpy files, open a .rpy file and select View|Syntax|Open all with current extension as...|RenpyLanguage.</string>
 	<key>fileTypes</key>
 	<array>
-		<string>rpy</string>
+		<string>rpy</string><!-- Ren'Py Script files -->
+		<string>rpym</string><!-- Ren'Py Module (internal) files -->
 	</array>
 	<key>firstLineMatch</key>
 	<string>^#!/.*\bpython[0-9.-]*\b</string>
@@ -25,6 +26,39 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.renpy</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.renpy</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.renpy</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.renpy</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>renpy keywords</string>
 			<key>match</key>
@@ -37,6 +71,14 @@
 			<string>dollar sign</string>
 			<key>match</key>
 			<string>^(\$)</string>
+			<key>name</key>
+			<string>keyword.control.flow.renpy</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>dollar sign prefixed whitespace</string>
+			<key>match</key>
+			<string>^\s+(\$)</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
