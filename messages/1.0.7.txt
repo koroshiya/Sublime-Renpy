@@ -1,0 +1,5 @@
+Sublime Renpy v1.0.7
+======================
+
+Minor fix for hotkeys introduced in 1.0.6;
+ctrl keys replaced with cmd ("super") for OSX.
