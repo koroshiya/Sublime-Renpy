@@ -1,0 +1,19 @@
+Sublime Renpy v1.0.6
+======================
+
+This update adds two hotkey overrides when working with
+a file in RenpyLanguage.
+Specifically, ctrl+b, ctrl+i and ctrl+u have been overridden
+to provide word processor-like functionality rather than
+the default Sublime Text behavior.
+
+For example, if you're writing the script for a Renpy game,
+and you want to italicize a word, you can now highlight it
+and hit ctrl+i.
+Similarly, highlighting a word and hitting ctrl+b will make
+it bold, and ctrl+u will underline it.
+
+This behavior was modified because italic and bold text is
+very common, whereas the commands Sublime Text has mapped
+to those combinations would likely be used far less when
+making a Renpy game.

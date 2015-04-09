@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+i"], "command": "renpy_text_tag", "args": {"tag": "i"} },
+	{ "keys": ["ctrl+b"], "command": "renpy_text_tag", "args": {"tag": "b"} },
+	{ "keys": ["ctrl+u"], "command": "renpy_text_tag", "args": {"tag": "u"} }
+]
