@@ -1,0 +1,6 @@
+Sublime Renpy v1.0.7
+======================
+
+This update fixes an issue with keymap contexts.
+The overridden keymaps are now restricted to
+Renpy Language syntax files.
