@@ -1,0 +1,16 @@
+Sublime Renpy v1.1.0
+======================
+
+Adds context-awareness.
+Previous releases took an "all or nothing" approach
+to completions and syntax highlighting.
+Sublime Renpy now attempts to add a level of context
+awareness to both.
+For example, plain python functions will no longer be
+suggested in a label block, but they will in a python
+block, or in a single line python statement.
+
+This release still has issues with highlighting, particularly
+on single line python statements. Auto completions should
+be good, but subsequent releases should aim to improve
+the highlighting.

@@ -1,0 +1,13 @@
+{
+   "scope": "source.renpy.init",
+   "completions":
+   [
+      { "trigger": "Action", "contents": "class $0(Action):\n\tdef __call__(self):\n\t\treturn None\n\tdef get_sensitive(self):\n\t\treturn True\n\tdef get_selected(self):\n\t\treturn False\n\tdef periodic(self, st):\n\t\treturn False\n\tdef unhovered(self):\n\t\tpass" },
+      { "trigger": "BarValue", "contents": "class $0(BarValue):\n\tdef get_adjustment(self):\n\t\treturn None\n\tdef get_style(self):\n\t\treturn ('bar', 'vbar')\n\tdef replaces(self, other):\n\t\tpass\n\tdef periodic(self, st):\n\t\treturn False" },
+      { "trigger": "MultiPersistent", "contents": "MultiPersistent(key=$0)" },
+      { "trigger": "NoRollback", "contents": "class $0(NoRollback):\n\tdef __init__(self):\n\t\tself.value = 0" },
+      { "trigger": "renpy.Displayable", "contents": "class MyDisplayable(Displayable):\n\tdef __init__(**properties):\n\t\tsuper(MyDisplayable, self).__init__(**properties)\n\tdef render(self, width, height, st, at):\n\t\tpass\n\tdef event(self, ev, x, y, st):\n\t\tpass\n\tdef per_interact(self):\n\t\tpass\n\tdef visit(self):\n\t\tpass" },
+      { "trigger": "renpy.register_sl_displayable", "contents": "renpy.register_sl_displayable(name='$0', displayable=None, style='', nchildren=0, scope=False, replaces=False, default_keywords={})" },
+      { "trigger": "renpy.register_sl_statement", "contents": "renpy.register_sl_statement(name='$0', positional=0, children='many', screen=None)" },
+   ]
+}

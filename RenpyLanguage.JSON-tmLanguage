@@ -1,0 +1,257 @@
+{
+    "bundleUUID": "0F24FCF1-6543-4CC6-8B33-2EAED401FE3D", 
+    "foldingStopMarker": "^\\s*$|^\\s*\\}|^\\s*\\]|^\\s*\\)|^\\s*\"\"\"\\s*$", 
+    "firstLineMatch": "^#!/.*\\bpython[0-9.-]*\\b", 
+    "fileTypes": [
+        "rpy", 
+        "rpym"
+    ], 
+    "scopeName": "source.renpy", 
+    "keyEquivalent": "^~P", 
+    "name": "RenpyLanguage", 
+    "comment": "To make RenpyLanguage the default for Renpy files, open a .rpy file and select View|Syntax|Open all with current extension as...|RenpyLanguage.", 
+    "patterns": [
+
+        {
+            "begin": "^(\\s*)(label)(\\s)+(.*):",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
+            },
+            "patterns": [
+                {"include": "#ingame"},
+
+                {
+                    "begin": "^(\\s)*python:",
+                    "beginCaptures":{
+                        "0":{"name":"keyword.control.flow.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#python"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "name": "source.python"
+                },
+
+                {
+                    "match":"^(\\s*)(\\$)(.*)",
+                    "include": "#python",
+                    "name": "source.python"
+                },
+
+                {
+                    "begin": "^(\\s)*init(\\s)+((\\+|\\-)\\d+\\s+)?python:",
+                    "beginCaptures":{
+                        "0":{"name":"keyword.control.flow.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#init"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "name": "source.renpy.init"
+                }
+
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.ingame"
+        },
+
+        {
+            "begin": "^(\\s)*(screen)(\\s)+(\\w)+(\\s)*(\\(.*\\))?(\\s)*:",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
+            },
+            "patterns": [
+                {"include": "#screen"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.screen"
+        },
+
+        {
+            "begin": "^(\\s)*(style)(\\s)+(.*)((\\s)+(is)(\\s)+(.*))?(\\s)*:",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"},
+                "7":{"name":"variable.parameter.renpy"},
+                "9":{"name":"variable.renpy"}
+            },
+            "patterns": [
+                {"include": "#atl"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.atl"
+        },
+
+        {
+            "begin": "^(\\s*)(transform)(\\s)+(.*):",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
+            },
+            "patterns": [
+                {"include": "#transform"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.transform"
+        },
+
+        {
+            "begin": "^(\\s*)(image|scene|show)((\\s)+(\\w)+)+:",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
+            },
+            "patterns": [
+                {"include": "#transform"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.transform"
+        },
+
+        {
+            "begin": "^(\\s)*python:",
+            "beginCaptures":{
+                "0":{"name":"keyword.control.flow.renpy"}
+            },
+            "patterns": [
+                {"include": "#python"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.python"
+        },
+
+        {
+            "match":"^(\\s*)(\\$)(.*)",
+            "include": "#python",
+            "name": "source.python"
+        },
+
+        {
+            "begin": "^(\\s)*init(\\s)+((\\+|\\-)\\d+\\s+)?python:",
+            "beginCaptures":{
+                "0":{"name":"keyword.control.flow.renpy"}
+            },
+            "patterns": [
+                {"include": "#init"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))",
+            "name": "source.renpy.init"
+        },
+
+        {
+            "include": "#default"
+        }
+    ],
+
+    "repository": {
+        "default":{
+            "comment": "Default context",
+            "match": "\\b(image|define|persistent)\\b",
+            "name":"keyword.control.flow.renpy",
+            "patterns": [
+                {
+                    "begin": "^(((\\s)*(\\w)+)(\\s)+)+=",
+                    "patterns": [
+                        {
+                            "include":"#python"
+                        }
+                    ]
+                }
+            ]
+        },
+        "atl":{
+            "comment": "ATL transform", 
+            "match": "\\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\\b",
+            "name": "variable.parameter.renpy"
+        },
+        "ingame":{
+            "comment": "Renpy label block",
+            "match": "\\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|stop|pause|play)\\b", 
+            "name": "variable.parameter.renpy"
+        },
+        "config":{
+            "comment": "Config variables",
+            "patterns": [ 
+                {
+                    "begin": "(\\s)*(config\\.)(.*)",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "3":{"name":"variable.renpy"}
+                    },
+                    "patterns": [
+                        {
+                            "match": "\\b(adjust_view_size|adv_nvl_transition|afm_bonus|afm_callback|afm_characters|after_load_transition|after_replay_callback|all_character_callbacks|allow_skipping|archives|auto_choice_delay|auto_load|auto_voice|automatic_images|automatic_images_strip|autoreload|autosave_frequency|autosave_on_choice|autosave_on_quit|autosave_slots|character_callback|choice_layer|clear_layers|context_clear_layers|custom_text_tags|debug|debug_image_cache|debug_sound|debug_text_overflow|default_afm_enable|default_afm_time|default_emphasize_audio|default_fullscreen|default_language|default_show_empty_window|default_text_cps|default_transform|default_voice_sustain|default_wait_for_voice|developer|dispatch_gesture|emphasize_audio_channels|emphasize_audio_time|emphasize_audio_volume|empty_window|end_game_transition|end_splash_transition|enter_replay_transition|enter_sound|enter_transition|enter_yesno_transition|exit_replay_transition|exit_sound|exit_transition|exit_yesno_transition|fade_music|fast_skipping|file_open_callback|fix_rollback_without_choice|focus_crossrange_penalty|font_replacement_map|framerate|game_main_transition|game_menu|game_menu_music|gestures|gl_enable|gl_resize|gl_test_image|hard_rollback_limit|has_autosave|help|hide|hw_video|image_cache_size|imagemap_auto_function|imagemap_cache|implicit_with_none|interact_callbacks|keep_running_transform|key_repeat|keymap|label_callback|label_overrides|language|layer_clipping|layers|lint_hooks|load_before_transition|log|longpress_duration|longpress_radius|longpress_vibrate|main_game_transition|main_menu|main_menu_music|menu_clear_layers|menu_window_subtitle|minimum_presplash_time|missing_background|missing_image_callback|missing_label_callback|mode_callbacks|mouse|mouse_hide_time|name|narrator_menu|nearest_neighbor|new_substitutions|nvl_adv_transition|nvl_layer|nvl_page_ctc|nvl_page_ctc_position|nvl_paged_rollback|old_substitutions|overlay_during_with|overlay_functions|overlay_layers|periodic_callback|predict_statements|profile|python_callbacks|quicksave_slots|quit_action|rollback_enabled|rollback_length|save_directory|save_dump|save_json_callbacks|save_physical_size|savedir|say_allow_dismiss|say_attribute_transition|say_layer|say_menu_text_filter|say_sustain_callbacks|scene|screen_height|screen_width|screenshot_callback|screenshot_crop|screenshot_pattern|script_version|search_prefixes|searchpath|show|side_image_only_not_showing|side_image_tag|skip_delay|skip_indicator|sound|sound_sample_rate|start_callbacks|start_interact_callbacks|thumbnail_height|thumbnail_width|top_layers|transform_uses_child_position|transient_layers|transition_screens|translations|variants|version|voice_filename_format|window_auto_hide|window_auto_show|window_hide_transition|window_icon|window_overlay_functions|window_show_transition|window_title|windows_icon|with_callback)\\b", 
+                            "name": "support.function.renpy"
+                        }
+                    ],
+                    "end": "\n"
+                }
+            ]
+        },
+
+        "init": {
+            "comment": "Renpy initialization code, such as config entries",
+            "patterns": [
+                {"include": "#config"},
+                {"include": "#python"},
+                {"include": "source.python"}
+            ]
+        },
+
+        "screen": {
+            "patterns": [
+                {
+                    "include":"#atl"
+                },
+                {
+                    "comment": "screen statements - http://www.renpy.org/doc/html/screens.html#screen-statement", 
+                    "match": "\\b(modal|style_group|tag|variant|zorder)\\b", 
+                    "name": "keyword.control.flow.renpy"
+                },
+                {
+                    "comment": "common properties - http://www.renpy.org/doc/html/screens.html#common-properties", 
+                    "match": "\\b(at|default|id|style|focus)\\b", 
+                    "name": "keyword.control.flow.renpy"
+                },
+                {
+                    "comment": "renpy keywords", 
+                    "match": "\\b(add|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\\b", 
+                    "name": "keyword.control.flow.renpy"
+                },
+                {
+                    "comment": "ATL arguments  variable.parameter.function.language.renpy", 
+                    "match": "\\b(action|style|unhovered|hovered)\\b", 
+                    "name": "variable.parameter.renpy"
+                },
+                {
+                    "comment": "renpy methods", 
+                    "match": "\\b(Action|AnimatedValue|At|Character|DictValue|Dissolve|DynamicCharacter|EndReplay|Fade|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|Function|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|FieldValue|Help|Hide|HideInterface|If|InvertSelected|Jump|LiveComposite|LiveCrop|MainMenu|MixerValue|MouseMove|Movie|Notify|NullAction|OpenURL|Pause|Play|Position|Preference|Queue|QuickLoad|QuickSave|Quit|Replay|Return|Rollback|RollForward|Screenshot|SelectedIf|SensitiveIf|SetDict|SetField|SetMixer|SetScreenVariable|SetVariable|ShowMenu|ShowTransient|SideImage|Skip|Start|StaticValue|Stop|Text|ToggleDict|ToggleField|ToggleScreenVariable|Tooltip|ToggleVariable|Transform|VariableValue|With|XScrollValue|YScrollValue|Start|Hide|Show)\\b", 
+                    "name": "support.function.renpy"
+                }
+            ],
+            "end": "^(?!(\\1\\s+|\\s*$))", 
+            "name": "source.renpy.screen"
+        },
+
+        "python": {
+            "patterns": [
+                {
+                    "begin": "(\\s)*(renpy\\.)(.*)",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "3":{"name":"variable.renpy"}
+                    },
+                    "end": "\n"
+                }
+            ]
+            
+        }
+
+    },
+
+    "foldingStartMarker": "^\\s*(def|class)\\s+([.a-zA-Z0-9_ <]+)\\s*(\\((.*)\\))?\\s*:|\\{\\s*$|\\(\\s*$|\\[\\s*$|^\\s*\"\"\"(?=.)(?!.*\"\"\")", 
+    "author": "Koroshiya", 
+    "uuid": "11B0273F-0284-4483-B17B-4B8D0A9294CD"
+}

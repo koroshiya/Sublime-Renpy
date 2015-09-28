@@ -1,0 +1,11 @@
+{
+   "scope": "source.renpy",
+   "completions":
+   [
+      { "trigger": "label", "contents": "label $0:\n\n\tpass" },
+      { "trigger": "python", "contents": "python:\n\n\t$0" },
+      { "trigger": "init", "contents": "init:\n\n\t$0" },
+      { "trigger": "define", "contents": "define: $0" },
+      { "trigger": "image", "contents": "image $0 = ''" },
+   ]
+}

@@ -1,0 +1,21 @@
+{
+   "scope": "source.python",
+   "scope": "source.renpy.init",
+   "scope": "source.renpy.python",
+   "completions":
+   [
+      { "trigger": "Color", "contents": "Color(color=$0, hls=None, hsv=None, rgb=None, alpha=1.0)" },
+      { "trigger": "Drag", "contents": "Drag(d=None, drag_name=None, draggable=True, droppable=True, drag_raise=True, dragged=None, dropped=None, drag_handle=(0.0, 0.0, 1.0, 1.0), drag_joined=None, clicked=None, hovered=None, unhovered=None)" },
+      { "trigger": "DragGroup", "contents": "DragGroup($0)" },
+      { "trigger": "Editor", "contents": "Editor()" },
+      { "trigger": "Gallery", "contents": "Gallery()" },
+      { "trigger": "Lexer", "contents": "Lexer()" },
+      { "trigger": "MusicRoom", "contents": "MusicRoom(channel='music', fadeout=0.0, fadein=0.0, loop=True, single_track=False, shuffle=False, stop_action=None)" },
+      { "trigger": "renpy.Render", "contents": "renpy.Render(width, height)" },
+      { "trigger": "Sprite", "contents": "Sprite()" },
+      { "trigger": "SpriteManager", "contents": "SpriteManager(update=None, event=None, predict=None, ignore_time=False)" },
+      { "trigger": "Style", "contents": "Style(parent='$0')" },
+      { "trigger": "Tooltip", "contents": "Tooltip(default='$0')" },
+      { "trigger": "Transform", "contents": "Transform(child=None, function=None)" },
+   ]
+}

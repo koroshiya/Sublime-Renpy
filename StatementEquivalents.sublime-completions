@@ -1,0 +1,57 @@
+{
+   "scope": "source.python, source.renpy.python, source.renpy.init",
+   "completions":
+   [
+      { "trigger": "renpy.say", "contents": "renpy.say(who='$0', what='', interact=True)" },
+      { "trigger": "renpy.display_menu", "contents": "renpy.display_menu(items=($0,), interact=True, screen='choice')" },
+      { "trigger": "renpy.get_at_list", "contents": "renpy.get_at_list(name='$0', layer='master')" },
+      { "trigger": "renpy.hide", "contents": "renpy.hide(name='$0', layer='master')" },
+      { "trigger": "renpy.image", "contents": "renpy.image(name='$0', d='')" },
+      { "trigger": "renpy.layer_at_list", "contents": "renpy.layer_at_list(at_list=[$0], layer='master')" },
+      { "trigger": "renpy.scene", "contents": "renpy.scene(layer='master')" },
+      { "trigger": "renpy.show", "contents": "renpy.show(name='$0', at_list=[], layer='master', what=None, zorder=0, tag=None, behind=[])" },
+      { "trigger": "renpy.show_layer_at", "contents": "renpy.show_layer_at(at_list=[$0], layer='master')" },
+      { "trigger": "renpy.with_statement", "contents": "renpy.with_statement(trans=$0, always=false)" },
+      { "trigger": "renpy.jump", "contents": "renpy.jump(label='$0')" },
+      { "trigger": "renpy.call", "contents": "renpy.call(label='$0')" },
+      { "trigger": "renpy.return_statement", "contents": "renpy.return_statement()" },
+
+      { "trigger": "renpy.seen_audio", "contents": "renpy.seen_audio(filename='$0')" },
+      { "trigger": "renpy.music.get_playing", "contents": "renpy.music.get_playing(channel='music')" },
+      { "trigger": "renpy.music.is_playing", "contents": "renpy.music.is_playing(channel='music')" },
+      { "trigger": "renpy.music.play", "contents": "renpy.music.play(filenames=$0, channel='music', loop=None, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False)" },
+      { "trigger": "renpy.music.queue", "contents": "renpy.music.queue(filenames=$0, channel='music', loop=None, clear_queue=True, fadein=0, tight=None)" },
+      { "trigger": "renpy.music.register_channel", "contents": "renpy.music.register_channel(name='$0', mixer=None, loop=None, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True)" },
+      { "trigger": "renpy.music.set_pan", "contents": "renpy.music.set_pan(pan=$0, delay=, channel='music')" },
+      { "trigger": "renpy.music.set_queue_empty_callback", "contents": "renpy.music.set_queue_empty_callback(callback=$0, channel='music')" },
+      { "trigger": "renpy.music.set_volume", "contents": "renpy.music.set_volume(volume=$0, delay=0, channel='music')" },
+      { "trigger": "renpy.music.stop", "contents": "renpy.music.stop(channel='music', fadeout=None)" },
+      
+      { "trigger": "renpy.movie_cutscene", "contents": "renpy.movie_cutscene(filename='$0', delay=None, loops=0, stop_music=True)" },
+
+      { "trigger": "renpy.call_replay", "contents": "renpy.call_replay(label='$0', scope={})" },
+      { "trigger": "renpy.end_replay", "contents": "renpy.end_replay()" },
+
+      { "trigger": "renpy.copy_images", "contents": "renpy.copy_images(old=$0, new=None)" },
+      { "trigger": "renpy.get_image_bounds", "contents": "renpy.get_image_bounds(tag=$0, width=None, height=None, layer='master')" },
+      { "trigger": "renpy.get_placement", "contents": "renpy.get_placement(d=$0)" },
+      { "trigger": "renpy.get_showing_tags", "contents": "renpy.get_placement(layer='master')" },
+      { "trigger": "renpy.has_image", "contents": "renpy.has_image(name='$0', exact=False)" },
+      { "trigger": "renpy.seen_image", "contents": "renpy.seen_image(name='$0')" },
+      { "trigger": "renpy.showing", "contents": "renpy.showing(name='$0', layer='master')" },
+      { "trigger": "renpy.start_predict", "contents": "renpy.start_predict(trans=$0, before=None, after=None)" },
+      { "trigger": "renpy.stop_predict", "contents": "renpy.stop_predict(trans=$0, before=None, after=None)" },
+      { "trigger": "image_exists", "contents": "image_exists(name='$0')" },
+
+      { "trigger": "AlphaDissolve", "contents": "AlphaDissolve(control=$0, delay=0.0, alpha=False, reverse=False)" },
+      { "trigger": "ComposeTransition", "contents": "ComposeTransition(trans=$0, before=None, after=None)" },
+      { "trigger": "CropMove", "contents": "CropMove(time=$0, mode='slideright', startcrop=(0.0, 0.0, 0.0, 1.0), startpos=(0.0, 0.0), endcrop=(0.0, 0.0, 1.0, 1.0), endpos=(0.0, 0.0), topnew=True)" },
+      { "trigger": "Dissolve", "contents": "Dissolve(time=$0, alpha=False, time_warp=None)" },
+      { "trigger": "Fade", "contents": "Fade(out_time=$0, hold_time=, in_time=, color='#000')" },
+      { "trigger": "ImageDissolve", "contents": "ImageDissolve(image=$0, time=, ramplen=8, reverse=False, alpha=True, time_warp=None" },
+      { "trigger": "MoveTransition", "contents": "MoveTransition(delay=$0, enter=None, leave=None, old=False, layers=['master'], time_warp=None, enter_time_warp=None, leave_time_warp=None)" },
+      { "trigger": "MultipleTransition", "contents": "MultipleTransition($0)" },
+      { "trigger": "Pause", "contents": "Pause(delay=$0)" },
+      { "trigger": "Pixellate", "contents": "Pixellate(time=$0, steps=)" },
+   ]
+}

@@ -1,0 +1,13 @@
+{
+   "scope": "source.renpy.ingame",
+   "completions":
+   [
+      { "trigger": "play", "contents": "play $0" },
+      { "trigger": "queue", "contents": "queue $0" },
+      { "trigger": "stop", "contents": "stop $0" },
+      { "trigger": "hide", "contents": "hide $0" },
+      { "trigger": "scene", "contents": "scene $0" },
+      { "trigger": "show", "contents": "show $0" },
+      { "trigger": "menu", "contents": "menu:\n\t\"$0\"\n\n\t\"Choice 1\":\n\n\t\tpass\n\n\t\"Choice 2\":\n\n\t\tpass" },
+   ]
+}

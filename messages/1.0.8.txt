@@ -1,4 +1,4 @@
-Sublime Renpy v1.0.7
+Sublime Renpy v1.0.8
 ======================
 
 This update fixes an issue with keymap contexts.
