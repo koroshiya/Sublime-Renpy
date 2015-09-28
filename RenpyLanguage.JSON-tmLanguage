@@ -169,7 +169,7 @@
         "ingame":{
             "comment": "Renpy label block",
             "match": "\\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|stop|pause|play)\\b", 
-            "name": "variable.parameter.renpy"
+            "name": "keyword.control.flow.renpy"
         },
         "config":{
             "comment": "Config variables",
