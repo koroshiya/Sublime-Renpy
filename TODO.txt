@@ -1,11 +1,4 @@
-Indent doesn't work properly for "python:", as it's in the
-source.python context, rather than the source.renpy context.
-
 - ground inside imagemaps isn't orange like xpos and stuff
-- the "# The two window variant." comment in say screen has window variant in pink
-- Comments are the same color as all text apart from keywords, I think it's nice if comments have different colors though(Maybe just because I'm used to it since the other editors I use have it like this and it was like this before?)
-- Strings are white just as everything else(they were dark yellow before I think?)
-- I believe numbers had a different color before?
-- If/else/for are white
 - input(eg in input screen) is white
 - init/style aren't working properly(see image)
+- parameters aren't highlighted within python blocks

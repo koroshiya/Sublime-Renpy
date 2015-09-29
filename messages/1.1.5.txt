@@ -1,0 +1,11 @@
+Sublime Renpy v1.1.5
+======================
+
+Bugfixes:
+-ctrl+i, b and u hotkey are now overridden again
+-single-line Python statements now work as anticipated
+-python and init python blocks now indent properly
+
+Improvements:
+-the ctrl hotkey overrides now only occur within strings
+-added autocomplete for renpy.input within label context

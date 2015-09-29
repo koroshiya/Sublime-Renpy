@@ -22,7 +22,7 @@
                 {"include": "#ingame"},
 
                 {
-                    "begin": "^(\\s)*python:",
+                    "begin": "^(\\s)*python(\\s)*:(\\s)*$",
                     "beginCaptures":{
                         "0":{"name":"keyword.control.flow.renpy"}
                     },
@@ -35,7 +35,7 @@
                 },
 
                 {
-                    "match":"^(\\s*)(\\$)$\n?",
+                    "match":"^(\\s*)(\\$)(.*)$\n?",
                     "patterns": [
                         {"include": "#python"},
                         {"include": "source.python"}
@@ -124,7 +124,7 @@
         },
 
         {
-            "begin": "^(\\s)*python:",
+            "begin": "^(\\s)*python(\\s)*:(\\s)*$",
             "beginCaptures":{
                 "0":{"name":"keyword.control.flow.renpy"}
             },
@@ -133,15 +133,6 @@
                 {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.python.renpy"
-        },
-
-        {
-            "match":"^(\\s*)(\\$)$\n?",
-            "patterns": [
-                {"include": "#python"},
-                {"include": "source.python"}
-            ],
             "name": "source.python.renpy"
         },
 
@@ -259,14 +250,12 @@
         "python": {
             "patterns": [
                 {
-                    "begin": "(\\s)*(renpy\\.)(.*)",
+                    "begin": "(\\s)*(renpy\\.)([a-zA-Z0-9_]*)",
                     "beginCaptures":{
+                        "0":{"name":"source.python"},
                         "2":{"name":"keyword.control.flow.renpy"},
                         "3":{"name":"variable.renpy"}
                     },
-                    "patterns": [
-                        {"include": "source.python"}
-                    ],
                     "end": "\n"
                 }
             ]
