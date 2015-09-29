@@ -1,0 +1,5 @@
+Indent doesn't work properly for "python:", as it's in the
+source.python context, rather than the source.renpy context.
+
+Init blocks don't auto-suggest python functions; including or
+naming source.python doesn't appear to help
