@@ -1,0 +1,5 @@
+Sublime Renpy v1.1.2
+======================
+
+Fix for native Python auto-completions in python
+init blocks.
