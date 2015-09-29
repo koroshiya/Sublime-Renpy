@@ -1,0 +1,4 @@
+Sublime Renpy v1.1.1
+======================
+
+Minor fix for indentation scoping.
