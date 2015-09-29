@@ -65,7 +65,7 @@
 					<key>end</key>
 					<string>^(?!(\1\s+|\s*$))</string>
 					<key>name</key>
-					<string>source.python</string>
+					<string>source.python.renpy</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -80,7 +80,7 @@
 					<key>match</key>
 					<string>^(\s*)(\$)(.*)</string>
 					<key>name</key>
-					<string>source.python</string>
+					<string>source.python.renpy</string>
 				</dict>
 				<dict>
 					<key>begin</key>
@@ -104,6 +104,10 @@
 							<string>#init</string>
 						</dict>
 					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
 				</dict>
 			</array>
 		</dict>
@@ -243,7 +247,7 @@
 			<key>end</key>
 			<string>^(?!(\1\s+|\s*$))</string>
 			<key>name</key>
-			<string>source.python</string>
+			<string>source.python.renpy</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -258,7 +262,7 @@
 			<key>match</key>
 			<string>^(\s*)(\$)(.*)</string>
 			<key>name</key>
-			<string>source.python</string>
+			<string>source.python.renpy</string>
 		</dict>
 		<dict>
 			<key>begin</key>

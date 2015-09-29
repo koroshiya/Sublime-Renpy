@@ -49,6 +49,10 @@
                     ],
                     "end": "^(?!(\\1\\s+|\\s*$))",
                     "name": "source.python.renpy.init"
+                },
+
+                {
+                    "include":"source.python"
                 }
 
             ],
