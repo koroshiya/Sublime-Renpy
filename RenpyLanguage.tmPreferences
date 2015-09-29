@@ -5,7 +5,7 @@
 		<key>name</key>
 		<string>Indent Rules</string>
 		<key>scope</key>
-		<string>source.python.renpy</string>
+		<string>source.renpy</string>
 		<key>settings</key>
 		<dict>
 			<key>decreaseIndentPattern</key>
