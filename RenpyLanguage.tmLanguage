@@ -96,7 +96,7 @@
 					<key>end</key>
 					<string>^(?!(\1\s+|\s*$))</string>
 					<key>name</key>
-					<string>source.renpy.init</string>
+					<string>source.python.renpy.init</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -274,7 +274,7 @@
 			<key>end</key>
 			<string>^(?!(\1\s+|\s*$))</string>
 			<key>name</key>
-			<string>source.renpy.init</string>
+			<string>source.python.renpy.init</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -381,10 +381,6 @@
 				<dict>
 					<key>include</key>
 					<string>#python</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.python</string>
 				</dict>
 			</array>
 		</dict>

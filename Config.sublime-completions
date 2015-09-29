@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpy.init",
+   "scope": "source.python.renpy.init",
    "completions":
    [
       { "trigger": "config.adjust_view_size", "contents": "config.adjust_view_size = $0" },

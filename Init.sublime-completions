@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpy.init",
+   "scope": "source.python.renpy.init",
    "completions":
    [
       { "trigger": "Action", "contents": "class $0(Action):\n\tdef __call__(self):\n\t\treturn None\n\tdef get_sensitive(self):\n\t\treturn True\n\tdef get_selected(self):\n\t\treturn False\n\tdef periodic(self, st):\n\t\treturn False\n\tdef unhovered(self):\n\t\tpass" },

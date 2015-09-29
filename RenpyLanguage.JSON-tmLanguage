@@ -30,13 +30,13 @@
                         {"include": "#python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*$))",
-                    "name": "source.python"
+                    "name": "source.python.renpy"
                 },
 
                 {
                     "match":"^(\\s*)(\\$)(.*)",
                     "include": "#python",
-                    "name": "source.python"
+                    "name": "source.python.renpy"
                 },
 
                 {
@@ -48,7 +48,7 @@
                         {"include": "#init"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*$))",
-                    "name": "source.renpy.init"
+                    "name": "source.python.renpy.init"
                 }
 
             ],
@@ -119,13 +119,13 @@
                 {"include": "#python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.python"
+            "name": "source.python.renpy"
         },
 
         {
             "match":"^(\\s*)(\\$)(.*)",
             "include": "#python",
-            "name": "source.python"
+            "name": "source.python.renpy"
         },
 
         {
@@ -137,7 +137,7 @@
                 {"include": "#init"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.renpy.init"
+            "name": "source.python.renpy.init"
         },
 
         {
@@ -195,8 +195,7 @@
             "comment": "Renpy initialization code, such as config entries",
             "patterns": [
                 {"include": "#config"},
-                {"include": "#python"},
-                {"include": "source.python"}
+                {"include": "#python"}
             ]
         },
 

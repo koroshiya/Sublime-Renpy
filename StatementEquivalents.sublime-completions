@@ -1,5 +1,5 @@
 {
-   "scope": "source.python, source.renpy.python, source.renpy.init",
+   "scope": "source.python",
    "completions":
    [
       { "trigger": "renpy.say", "contents": "renpy.say(who='$0', what='', interact=True)" },

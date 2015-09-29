@@ -1,7 +1,5 @@
 {
    "scope": "source.python",
-   "scope": "source.renpy.init",
-   "scope": "source.renpy.python",
    "completions":
    [
       { "trigger": "Color", "contents": "Color(color=$0, hls=None, hsv=None, rgb=None, alpha=1.0)" },

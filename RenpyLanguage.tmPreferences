@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>name</key>
-		<string>Indent Rules</string>
+		<string>Renpy Indent Rules</string>
 		<key>scope</key>
 		<string>source.renpy</string>
 		<key>settings</key>
