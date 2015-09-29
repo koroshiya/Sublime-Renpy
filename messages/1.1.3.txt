@@ -1,0 +1,4 @@
+Sublime Renpy v1.1.3
+======================
+
+Quick fix for comments, strings, etc. in label blocks
