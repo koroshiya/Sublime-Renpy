@@ -1,0 +1,7 @@
+Sublime Renpy v1.1.4
+======================
+
+Bugfixes:
+-Comments, numbers and strings now act as they should
+-Python keywords are now highlighted appropriately
+-Python functions are now suggested within the appropriate contexts

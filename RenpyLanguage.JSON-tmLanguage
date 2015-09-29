@@ -27,15 +27,19 @@
                         "0":{"name":"keyword.control.flow.renpy"}
                     },
                     "patterns": [
-                        {"include": "#python"}
+                        {"include": "#python"},
+                        {"include": "source.python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*$))",
                     "name": "source.python.renpy"
                 },
 
                 {
-                    "match":"^(\\s*)(\\$)(.*)",
-                    "include": "#python",
+                    "match":"^(\\s*)(\\$)$\n?",
+                    "patterns": [
+                        {"include": "#python"},
+                        {"include": "source.python"}
+                    ],
                     "name": "source.python.renpy"
                 },
 
@@ -45,7 +49,8 @@
                         "0":{"name":"keyword.control.flow.renpy"}
                     },
                     "patterns": [
-                        {"include": "#init"}
+                        {"include": "#init"},
+                        {"include": "source.python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*$))",
                     "name": "source.python.renpy.init"
@@ -67,7 +72,8 @@
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
-                {"include": "#screen"}
+                {"include": "#screen"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.renpy.screen"
@@ -82,7 +88,8 @@
                 "9":{"name":"variable.renpy"}
             },
             "patterns": [
-                {"include": "#atl"}
+                {"include": "#atl"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.renpy.atl"
@@ -95,7 +102,8 @@
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
-                {"include": "#transform"}
+                {"include": "#transform"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.renpy.transform"
@@ -108,7 +116,8 @@
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
-                {"include": "#transform"}
+                {"include": "#transform"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.renpy.transform"
@@ -120,15 +129,19 @@
                 "0":{"name":"keyword.control.flow.renpy"}
             },
             "patterns": [
-                {"include": "#python"}
+                {"include": "#python"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.python.renpy"
         },
 
         {
-            "match":"^(\\s*)(\\$)(.*)",
-            "include": "#python",
+            "match":"^(\\s*)(\\$)$\n?",
+            "patterns": [
+                {"include": "#python"},
+                {"include": "source.python"}
+            ],
             "name": "source.python.renpy"
         },
 
@@ -138,14 +151,16 @@
                 "0":{"name":"keyword.control.flow.renpy"}
             },
             "patterns": [
-                {"include": "#init"}
+                {"include": "#init"},
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.python.renpy.init"
         },
 
         {
-            "include": "#default"
+            "include": "#default",
+            "include": "source.python"
         }
     ],
 
@@ -188,6 +203,9 @@
                         {
                             "match": "\\b(adjust_view_size|adv_nvl_transition|afm_bonus|afm_callback|afm_characters|after_load_transition|after_replay_callback|all_character_callbacks|allow_skipping|archives|auto_choice_delay|auto_load|auto_voice|automatic_images|automatic_images_strip|autoreload|autosave_frequency|autosave_on_choice|autosave_on_quit|autosave_slots|character_callback|choice_layer|clear_layers|context_clear_layers|custom_text_tags|debug|debug_image_cache|debug_sound|debug_text_overflow|default_afm_enable|default_afm_time|default_emphasize_audio|default_fullscreen|default_language|default_show_empty_window|default_text_cps|default_transform|default_voice_sustain|default_wait_for_voice|developer|dispatch_gesture|emphasize_audio_channels|emphasize_audio_time|emphasize_audio_volume|empty_window|end_game_transition|end_splash_transition|enter_replay_transition|enter_sound|enter_transition|enter_yesno_transition|exit_replay_transition|exit_sound|exit_transition|exit_yesno_transition|fade_music|fast_skipping|file_open_callback|fix_rollback_without_choice|focus_crossrange_penalty|font_replacement_map|framerate|game_main_transition|game_menu|game_menu_music|gestures|gl_enable|gl_resize|gl_test_image|hard_rollback_limit|has_autosave|help|hide|hw_video|image_cache_size|imagemap_auto_function|imagemap_cache|implicit_with_none|interact_callbacks|keep_running_transform|key_repeat|keymap|label_callback|label_overrides|language|layer_clipping|layers|lint_hooks|load_before_transition|log|longpress_duration|longpress_radius|longpress_vibrate|main_game_transition|main_menu|main_menu_music|menu_clear_layers|menu_window_subtitle|minimum_presplash_time|missing_background|missing_image_callback|missing_label_callback|mode_callbacks|mouse|mouse_hide_time|name|narrator_menu|nearest_neighbor|new_substitutions|nvl_adv_transition|nvl_layer|nvl_page_ctc|nvl_page_ctc_position|nvl_paged_rollback|old_substitutions|overlay_during_with|overlay_functions|overlay_layers|periodic_callback|predict_statements|profile|python_callbacks|quicksave_slots|quit_action|rollback_enabled|rollback_length|save_directory|save_dump|save_json_callbacks|save_physical_size|savedir|say_allow_dismiss|say_attribute_transition|say_layer|say_menu_text_filter|say_sustain_callbacks|scene|screen_height|screen_width|screenshot_callback|screenshot_crop|screenshot_pattern|script_version|search_prefixes|searchpath|show|side_image_only_not_showing|side_image_tag|skip_delay|skip_indicator|sound|sound_sample_rate|start_callbacks|start_interact_callbacks|thumbnail_height|thumbnail_width|top_layers|transform_uses_child_position|transient_layers|transition_screens|translations|variants|version|voice_filename_format|window_auto_hide|window_auto_show|window_hide_transition|window_icon|window_overlay_functions|window_show_transition|window_title|windows_icon|with_callback)\\b", 
                             "name": "support.function.renpy"
+                        },
+                        {
+                            "include": "source.python"
                         }
                     ],
                     "end": "\n"
@@ -246,6 +264,9 @@
                         "2":{"name":"keyword.control.flow.renpy"},
                         "3":{"name":"variable.renpy"}
                     },
+                    "patterns": [
+                        {"include": "source.python"}
+                    ],
                     "end": "\n"
                 }
             ]
