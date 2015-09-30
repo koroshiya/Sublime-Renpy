@@ -53,7 +53,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>^(\s)*python:</string>
+					<string>^(\s)*python((\s)+(\w)*)?:(\s)*$</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
@@ -89,33 +89,6 @@
 						<dict>
 							<key>include</key>
 							<string>#python</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>source.python</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>begin</key>
-					<string>^(\s)*init(\s)+((\+|\-)\d+\s+)?python:</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.control.flow.renpy</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>^(?!(\1\s+|\s*$))</string>
-					<key>name</key>
-					<string>source.python.renpy.init</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#init</string>
 						</dict>
 						<dict>
 							<key>include</key>
@@ -269,7 +242,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\s)*python(\s)*:(\s)*$</string>
+			<string>^(\s)*python((\s)+(\w)*)?:(\s)*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -296,7 +269,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\s)*init(\s)+((\+|\-)\d+\s+)?python:</string>
+			<string>^(\s)*init(\s)+((\+|\-)\d+\s+)?python((\s)+(\w)*)?:(\s)*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -314,6 +287,124 @@
 				<dict>
 					<key>include</key>
 					<string>#init</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^(\s)*init(\s+(\+|\-)\d+)?((\s)+(\w)*)?\s*:(\s)*$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.flow.renpy</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^(?!(\1\s+|\s*$))</string>
+			<key>name</key>
+			<string>source.renpy</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>^(\s)*python((\s)+(\w)*)?:(\s)*$</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>name</key>
+					<string>source.python.renpy.init</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#python</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#init</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^(\s*)(\$)(.*)$
+?</string>
+					<key>name</key>
+					<string>source.python.renpy.init</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#python</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#init</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>^(\s)*(style)(\s)+(.*)((\s)+(is)(\s)+(.*))?(\s)*:</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+						<key>7</key>
+						<dict>
+							<key>name</key>
+							<string>variable.parameter.renpy</string>
+						</dict>
+						<key>9</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>name</key>
+					<string>source.renpy.atl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#atl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
 					<key>include</key>

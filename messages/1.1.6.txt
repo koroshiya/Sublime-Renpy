@@ -1,0 +1,14 @@
+Sublime Renpy v1.1.6
+======================
+
+Bugfixes:
+
+Improvements:
+-python and init python blocks now allow extra args between "python" and ":".
+	eg. "init -1 python hide:", as found in options.rpy
+
+Changes:
+-init python blocks are no longer allowed within label contexts
+
+New:
+-added support for plain init blocks (NOT init python blocks)
