@@ -80,8 +80,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^(\s*)(\$)(.*)$
-?</string>
+					<string>^(\s*)(\$)(.*)$\n?</string>
 					<key>name</key>
 					<string>source.python.renpy</string>
 					<key>patterns</key>
@@ -104,7 +103,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\s)*(screen)(\s)+(\w)+(\s)*(\(.*\))?(\s)*:</string>
+			<string>^(\s)*(screen)(\s)+(\w+)(\s)*(\(.*\))?(\s)*:</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -344,8 +343,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^(\s*)(\$)(.*)$
-?</string>
+					<string>^(\s*)(\$)(.*)$\n?</string>
 					<key>name</key>
 					<string>source.python.renpy.init</string>
 					<key>patterns</key>
@@ -451,8 +449,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>
-</string>
+					<string>\n</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -543,8 +540,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>
-</string>
+					<string>\n</string>
 				</dict>
 			</array>
 		</dict>
