@@ -4,6 +4,7 @@ Sublime Renpy v1.1.7
 Bugfixes:
 -Fixed appearance of "screen" keyword in a screen block
 -Nested python blocks no longer leak context
+-Single-line python statements are now styled correctly
 
 Improvements:
 
