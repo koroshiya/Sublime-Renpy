@@ -59,6 +59,14 @@
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
+                {
+                    "begin":"^(\\s*)(imagemap).*:",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"}
+                    },
+                    "patterns": [{"include": "#imagemap"}],
+                    "end": "^(?!(\\1\\s+|\\s*$))"
+                },
                 {"include": "#screen"},
                 {"include": "source.python"}
             ],
@@ -285,6 +293,17 @@
             ],
             "end": "^(?!(\\1\\s+|\\s*$))", 
             "name": "source.renpy.screen"
+        },
+
+        "imagemap": {
+            "patterns": [
+                {
+                   "match": "\\b(auto|ground|insensitive|idle|hover|selected_idle|selected_hover|alpha|cache)\\b",
+                   "name": "variable.parameter.renpy"
+                },
+                {"include": "#screen"},
+                {"include": "source.python"}
+            ]
         },
 
         "python": {

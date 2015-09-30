@@ -124,6 +124,27 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>begin</key>
+					<string>^(\s*)(imagemap).*:</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#imagemap</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
 					<key>include</key>
 					<string>#screen</string>
 				</dict>
@@ -486,6 +507,26 @@
 							<string>#python</string>
 						</dict>
 					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>imagemap</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(auto|ground|insensitive|idle|hover|selected_idle|selected_hover|alpha|cache)\b</string>
+					<key>name</key>
+					<string>variable.parameter.renpy</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#screen</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
 				</dict>
 			</array>
 		</dict>

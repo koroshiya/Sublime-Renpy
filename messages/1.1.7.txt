@@ -9,3 +9,4 @@ Improvements:
 Changes:
 
 New:
+-Context added for imagemaps
