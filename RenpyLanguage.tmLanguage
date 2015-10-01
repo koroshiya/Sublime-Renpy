@@ -123,68 +123,8 @@
 			<string>#style</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>^(\h*)(transform)(\s+)(\w+)(\s*):</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.flow.renpy</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
-			<key>name</key>
-			<string>source.renpy.transform</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#transform</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.python</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>^(\s*)(image|scene|show)((\s+)(\w+))+:</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.flow.renpy</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
-			<key>name</key>
-			<string>source.renpy.transform</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#transform</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>source.python</string>
-				</dict>
-			</array>
+			<key>include</key>
+			<string>#transform</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -264,7 +204,7 @@
 			<key>comment</key>
 			<string>ATL transform</string>
 			<key>match</key>
-			<string>\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\b</string>
+			<string>\b(alpha|linear|insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\b</string>
 			<key>name</key>
 			<string>variable.parameter.renpy</string>
 		</dict>
@@ -620,6 +560,46 @@
 				<dict>
 					<key>include</key>
 					<string>source.python</string>
+				</dict>
+			</array>
+		</dict>
+		<key>transform</key>
+		<dict>
+			<key>comment</key>
+			<string>ATL blocks</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>^(\h*)(transform|image|scene|show)(\s+)(\w+)(\s*)((\(.*\))(\s*))?:</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>name</key>
+					<string>source.renpy.transform</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#atl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>

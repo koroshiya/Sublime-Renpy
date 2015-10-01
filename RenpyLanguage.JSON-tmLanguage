@@ -52,33 +52,7 @@
 
         {"include":"#style"},
 
-        {
-            "begin": "^(\\h*)(transform)(\\s+)(\\w+)(\\s*):",
-            "beginCaptures":{
-                "2":{"name":"keyword.control.flow.renpy"},
-                "4":{"name":"variable.renpy"}
-            },
-            "patterns": [
-                {"include": "#transform"},
-                {"include": "source.python"}
-            ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.renpy.transform"
-        },
-
-        {
-            "begin": "^(\\s*)(image|scene|show)((\\s+)(\\w+))+:",
-            "beginCaptures":{
-                "2":{"name":"keyword.control.flow.renpy"},
-                "3":{"name":"variable.renpy"}
-            },
-            "patterns": [
-                {"include": "#transform"},
-                {"include": "source.python"}
-            ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.renpy.transform"
-        },
+        {"include":"#transform"},
 
         {"include": "#python_block"},
 
@@ -134,13 +108,31 @@
         },
         "atl":{
             "comment": "ATL transform", 
-            "match": "\\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\\b",
+            "match": "\\b(alpha|linear|insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\\b",
             "name": "variable.parameter.renpy"
         },
         "ingame":{
             "comment": "Renpy label block",
             "match": "\\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|stop|pause|play)\\b", 
             "name": "keyword.control.flow.renpy"
+        },
+        "transform":{
+            "comment": "ATL blocks",
+            "patterns": [ 
+                {
+                    "begin": "^(\\h*)(transform|image|scene|show)(\\s+)(\\w+)(\\s*)((\\(.*\\))(\\s*))?:",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "4":{"name":"variable.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#atl"},
+                        {"include": "source.python"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "name": "source.renpy.transform"
+                }
+            ]
         },
         "config":{
             "comment": "Config variables",
