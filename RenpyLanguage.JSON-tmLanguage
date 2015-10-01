@@ -153,19 +153,38 @@
         },
 
         "style": {
-            "begin": "^(\\s*)(style)(\\s+\\w+)((\\s+)(is)(\\s+)(\\w+))?(\\s*):",
-            "beginCaptures":{
-                "2":{"name":"keyword.control.flow.renpy"},
-                "3":{"name":"variable.renpy"},
-                "6":{"name":"variable.parameter.renpy"},
-                "8":{"name":"variable.renpy"}
-            },
             "patterns": [
-                {"include": "#atl"},
-                {"include": "source.python"}
-            ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
-            "name": "source.renpy.atl"
+                {
+                    "begin": "^(\\s*)(style)(\\s+\\w+)((\\s+)(is)(\\s+)(\\w+))?(\\s*):",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "3":{"name":"variable.renpy"},
+                        "6":{"name":"keyword.control.flow.renpy"},
+                        "8":{"name":"variable.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#atl"},
+                        {"include": "source.python"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "name": "source.renpy.atl"
+                },
+                {
+                    "begin": "^(\\s*)(style)(\\s+\\w+)(\\s+)(is)(\\s+)(\\w+)",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "3":{"name":"variable.renpy"},
+                        "5":{"name":"keyword.control.flow.renpy"},
+                        "7":{"name":"variable.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#atl"},
+                        {"include": "source.python"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "name": "source.renpy.atl"
+                }
+            ]
         },
 
         "screen": {

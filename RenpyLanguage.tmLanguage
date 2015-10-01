@@ -496,44 +496,91 @@
 		</dict>
 		<key>style</key>
 		<dict>
-			<key>begin</key>
-			<string>^(\s*)(style)(\s+\w+)((\s+)(is)(\s+)(\w+))?(\s*):</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.flow.renpy</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
-				<key>6</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.renpy</string>
-				</dict>
-				<key>8</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
-			<key>name</key>
-			<string>source.renpy.atl</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>include</key>
-					<string>#atl</string>
+					<key>begin</key>
+					<string>^(\s*)(style)(\s+\w+)((\s+)(is)(\s+)(\w+))?(\s*):</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+						<key>6</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>8</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>name</key>
+					<string>source.renpy.atl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#atl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
-					<key>include</key>
-					<string>source.python</string>
+					<key>begin</key>
+					<string>^(\s*)(style)(\s+\w+)(\s+)(is)(\s+)(\w+)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>7</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*$))</string>
+					<key>name</key>
+					<string>source.renpy.atl</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#atl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>source.python</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
