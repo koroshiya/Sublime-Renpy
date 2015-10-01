@@ -216,7 +216,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(\s)*(config\.)(.*)</string>
+					<string>(\h*)(config\.)(\w+)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>2</key>

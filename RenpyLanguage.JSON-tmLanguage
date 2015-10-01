@@ -138,7 +138,7 @@
             "comment": "Config variables",
             "patterns": [ 
                 {
-                    "begin": "(\\s)*(config\\.)(.*)",
+                    "begin": "(\\h*)(config\\.)(\\w+)",
                     "beginCaptures":{
                         "2":{"name":"keyword.control.flow.renpy"},
                         "3":{"name":"variable.renpy"}
