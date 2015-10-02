@@ -1,0 +1,17 @@
+Sublime Renpy v1.1.8
+======================
+
+Bugfixes:
+-Transforms with brackets now work properly
+-Fixes for single-line style statement highlighting
+-Fixed highlighting for "alpha" and "linear" in ATL blocks
+
+Improvements:
+-ATL blocks are now recognized more accurately
+-Config statements are now highlighted more accurately
+-Simplified renpy python variable recognition
+
+Changes:
+-Removed config variables as individual highlights, since they're already autocompleted
+
+New:
