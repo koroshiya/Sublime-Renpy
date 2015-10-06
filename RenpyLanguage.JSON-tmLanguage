@@ -266,16 +266,16 @@
         },
 
         "python_line": {
-            "begin": "^(\\s*)(\\$)",
-            "beginCaptures":{
-                "2":{"name":"keyword.control.flow.renpy"}
+            "match": "(\\h*)(\\$)((\\s*)([\\w_\\.]+))*",
+            "name":"source.python.renpy",
+            "captures": {
+                "2":{"name":"keyword.control.flow.renpy"},
+                "5":{"name":"variable.renpy"}
             },
             "patterns": [
                 {"include": "#python"},
                 {"include": "source.python"}
-            ],
-            "end": "\\n",
-            "name": "source.python.renpy"
+            ]
         },
 
         "python_block_init": {
@@ -293,17 +293,17 @@
         },
 
         "python_line_init": {
-            "begin": "^(\\s*)(\\$)",
-            "beginCaptures":{
-                "2":{"name":"keyword.control.flow.renpy"}
+            "match": "(\\h*)(\\$)((\\s*)([\\w_\\.]+))*",
+            "name":"source.python.renpy.init",
+            "captures": {
+                "2":{"name":"keyword.control.flow.renpy"},
+                "5":{"name":"variable.renpy"}
             },
             "patterns": [
                 {"include": "#python"},
                 {"include": "#init"},
                 {"include": "source.python"}
-            ],
-            "end": "\\n",
-            "name": "source.python.renpy.init"
+            ]
         }
 
 

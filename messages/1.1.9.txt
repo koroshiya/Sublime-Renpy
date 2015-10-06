@@ -1,0 +1,14 @@
+Sublime Renpy v1.1.9
+======================
+
+This release is mostly to push the changes introduced in
+v1.1.8, the release of which was botched.
+
+Bugfixes:
+
+Improvements:
+-Improved behavior of single-line python statements
+
+Changes:
+
+New:
