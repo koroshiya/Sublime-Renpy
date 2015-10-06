@@ -79,6 +79,7 @@
             "patterns": [
                 {"include":"#python_block_init"},
                 {"include":"#python_line_init"},
+                {"include":"#transform"},
                 {"include":"#default"},
                 {"include":"#style"},
                 {"include": "source.python"}
@@ -87,10 +88,8 @@
             "name": "source.renpy"
         },
 
-        {
-            "include": "#default",
-            "include": "source.python"
-        }
+        {"include": "#default"},
+        {"include": "source.python"}
     ],
 
     "repository": {
@@ -131,10 +130,10 @@
             "comment": "ATL blocks",
             "patterns": [ 
                 {
-                    "begin": "^(\\h*)(transform|image|scene|show)(\\s+)(\\w+)(\\s*)((\\(.*\\))(\\s*))?:",
+                    "begin": "^(\\h*)(transform|image|scene|show)((\\s+)(\\w+))+(\\s*)((\\(.*\\))(\\s*))?:",
                     "beginCaptures":{
                         "2":{"name":"keyword.control.flow.renpy"},
-                        "4":{"name":"variable.renpy"}
+                        "3":{"name":"variable.renpy"}
                     },
                     "patterns": [
                         {"include": "#atl"},

@@ -2,6 +2,7 @@ Sublime Renpy v1.1.10
 ======================
 
 Bugfixes:
+-Fixed default context
 
 Improvements:
 -Python blocks & single line statements are now available in screen context

@@ -192,6 +192,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#transform</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#default</string>
 				</dict>
 				<dict>
@@ -203,6 +207,10 @@
 					<string>source.python</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#default</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -621,7 +629,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>^(\h*)(transform|image|scene|show)(\s+)(\w+)(\s*)((\(.*\))(\s*))?:</string>
+					<string>^(\h*)\b(transform|image|scene|show)\b((\s+)(\w+))+(\s*)((\(.*\))(\s*))?:</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>2</key>
@@ -629,7 +637,7 @@
 							<key>name</key>
 							<string>keyword.control.flow.renpy</string>
 						</dict>
-						<key>4</key>
+						<key>3</key>
 						<dict>
 							<key>name</key>
 							<string>variable.renpy</string>
