@@ -114,6 +114,14 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#python_block</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#python_line</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>source.python</string>
 				</dict>
 			</array>

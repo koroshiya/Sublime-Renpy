@@ -44,6 +44,8 @@
                     "end": "^(?!(\\1\\s+|\\s*$))"
                 },
                 {"include": "#screen"},
+                {"include": "#python_block"},
+                {"include": "#python_line"},
                 {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
