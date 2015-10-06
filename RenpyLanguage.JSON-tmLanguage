@@ -95,7 +95,7 @@
     "repository": {
         "default":{
             "comment": "Default context",
-            "match": "\\b(image|define|persistent)\\b",
+            "match": "\\b(transform|image|define|persistent)\\b",
             "name":"keyword.control.flow.renpy",
             "patterns": [
                 {

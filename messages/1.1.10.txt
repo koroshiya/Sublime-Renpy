@@ -7,6 +7,7 @@ Bugfixes:
 Improvements:
 -Python blocks & single line statements are now available in screen context
 -Init blocks now include the default context
+-Added transform keyword to default context
 
 Changes:
 
