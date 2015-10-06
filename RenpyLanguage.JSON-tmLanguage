@@ -79,6 +79,7 @@
             "patterns": [
                 {"include":"#python_block_init"},
                 {"include":"#python_line_init"},
+                {"include":"#default"},
                 {"include":"#style"},
                 {"include": "source.python"}
             ],

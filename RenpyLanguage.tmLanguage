@@ -192,6 +192,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#default</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#style</string>
 				</dict>
 				<dict>
