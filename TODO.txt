@@ -1,3 +1,1 @@
-- input(eg in input screen) is white
-- init/style aren't working properly(see image)
-- parameters aren't highlighted within python blocks
+-transform context not working within init blocks
