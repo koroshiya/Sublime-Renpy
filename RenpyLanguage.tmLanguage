@@ -27,7 +27,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>^(\h*)(label)(\s+)(.*):</string>
+			<string>^(\h*)(label)(\s+)(\w+)(\s*)(\(.*\))(\s*)?:</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -47,6 +47,14 @@
 			<string>source.renpy.ingame</string>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#string_quoted_single</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#string_quoted_double</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#ingame</string>
@@ -528,6 +536,42 @@
 					<string>\b(Action|AnimatedValue|At|Character|DictValue|Dissolve|DynamicCharacter|EndReplay|Fade|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|Function|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|FieldValue|Help|Hide|HideInterface|If|InvertSelected|Jump|LiveComposite|LiveCrop|MainMenu|MixerValue|MouseMove|Movie|Notify|NullAction|OpenURL|Pause|Play|Position|Preference|Queue|QuickLoad|QuickSave|Quit|Replay|Return|Rollback|RollForward|Screenshot|SelectedIf|SensitiveIf|SetDict|SetField|SetMixer|SetScreenVariable|SetVariable|ShowMenu|ShowTransient|SideImage|Skip|Start|StaticValue|Stop|Text|ToggleDict|ToggleField|ToggleScreenVariable|Tooltip|ToggleVariable|Transform|VariableValue|With|XScrollValue|YScrollValue|Start|Hide|Show)\b</string>
 					<key>name</key>
 					<string>support.function.renpy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>string_quoted_double</key>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;!\\)"</string>
+			<key>end</key>
+			<string>(?&lt;!\\)"</string>
+			<key>name</key>
+			<string>string.quoted.double.single-line.python</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
+			</array>
+		</dict>
+		<key>string_quoted_single</key>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;!\\)'</string>
+			<key>end</key>
+			<string>(?&lt;!\\)'</string>
+			<key>name</key>
+			<string>string.quoted.single.single-line.python</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
 				</dict>
 			</array>
 		</dict>

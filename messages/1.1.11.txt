@@ -1,0 +1,11 @@
+Sublime Renpy v1.1.11
+======================
+
+Bugfixes:
+
+Improvements:
+-Renpy label text now supports multi-line
+
+Changes:
+
+New:

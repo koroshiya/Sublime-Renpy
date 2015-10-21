@@ -13,16 +13,18 @@
     "patterns": [
 
         {
-            "begin": "^(\\h*)(label)(\\s+)(.*):",
+            "begin": "^(\\h*)(label)(\\s+)(\\w+)(\\s*)(\\(.*\\))(\\s*)?:",
             "beginCaptures":{
                 "2":{"name":"keyword.control.flow.renpy"},
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
+                {"include": "#string_quoted_single"},
+                {"include": "#string_quoted_double"},
                 {"include": "#ingame"},
                 {"include": "#python_block"},
                 {"include": "#python_line"},
-                {"include":"source.python"}
+                {"include": "source.python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*$))",
             "name": "source.renpy.ingame"
@@ -107,6 +109,28 @@
                     ]
                 }
             ]
+        },
+        "string_quoted_single":{
+            "begin": "(?<!\\\\)'",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.backslash.regex.python"
+                }
+            ],
+            "end": "(?<!\\\\)'",
+            "name": "string.quoted.single.single-line.python"
+        },
+        "string_quoted_double":{
+            "begin": "(?<!\\\\)\"",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.backslash.regex.python"
+                }
+            ],
+            "end": "(?<!\\\\)\"",
+            "name": "string.quoted.double.single-line.python"
         },
         "atl":{
             "comment": "ATL transform", 
