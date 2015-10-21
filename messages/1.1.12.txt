@@ -1,0 +1,11 @@
+Sublime Renpy v1.1.12
+======================
+
+Bugfixes:
+
+Improvements:
+-Added jump keyword to label context
+
+Changes:
+
+New:

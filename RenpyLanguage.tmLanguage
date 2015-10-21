@@ -317,7 +317,7 @@
 			<key>comment</key>
 			<string>Renpy label block</string>
 			<key>match</key>
-			<string>\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|stop|pause|play)\b</string>
+			<string>\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|jump|stop|pause|play)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
