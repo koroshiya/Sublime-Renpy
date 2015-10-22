@@ -26,7 +26,7 @@
                 {"include": "#python_line"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy.ingame"
         },
 
@@ -43,14 +43,14 @@
                         "2":{"name":"keyword.control.flow.renpy"}
                     },
                     "patterns": [{"include": "#imagemap"}],
-                    "end": "^(?!(\\1\\s+|\\s*$))"
+                    "end": "^(?!(\\1\\s+|\\s*#.*$))"
                 },
                 {"include": "#screen"},
                 {"include": "#python_block"},
                 {"include": "#python_line"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy.screen"
         },
 
@@ -69,7 +69,7 @@
                 {"include": "#init"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.python.renpy.init"
         },
 
@@ -86,7 +86,7 @@
                 {"include":"#style"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy"
         },
 
@@ -163,7 +163,7 @@
                         {"include": "#atl"},
                         {"include": "source.python"}
                     ],
-                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.transform"
                 }
             ]
@@ -200,7 +200,7 @@
                         {"include": "#atl"},
                         {"include": "source.python"}
                     ],
-                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.atl"
                 },
                 {
@@ -215,7 +215,7 @@
                         {"include": "#atl"},
                         {"include": "source.python"}
                     ],
-                    "end": "^(?!(\\1\\s+|\\s*$))",
+                    "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.atl"
                 }
             ]
@@ -252,7 +252,7 @@
                     "name": "support.function.renpy"
                 }
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))", 
+            "end": "^(?!(\\1\\s+|\\s*#.*$))", 
             "name": "source.renpy.screen"
         },
 
@@ -287,7 +287,7 @@
                 {"include": "#python"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.python.renpy"
         },
 
@@ -314,7 +314,7 @@
                 {"include": "#init"},
                 {"include": "source.python"}
             ],
-            "end": "^(?!(\\1\\s+|\\s*$))",
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.python.renpy.init"
         },
 

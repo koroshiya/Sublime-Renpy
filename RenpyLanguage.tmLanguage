@@ -42,7 +42,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.renpy.ingame</string>
 			<key>patterns</key>
@@ -90,7 +90,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.renpy.screen</string>
 			<key>patterns</key>
@@ -107,7 +107,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^(?!(\1\s+|\s*$))</string>
+					<string>^(?!(\1\s+|\s*#.*$))</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -158,7 +158,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.python.renpy.init</string>
 			<key>patterns</key>
@@ -185,7 +185,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.renpy</string>
 			<key>patterns</key>
@@ -372,7 +372,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.python.renpy</string>
 			<key>patterns</key>
@@ -400,7 +400,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.python.renpy.init</string>
 			<key>patterns</key>
@@ -488,7 +488,7 @@
 		<key>screen</key>
 		<dict>
 			<key>end</key>
-			<string>^(?!(\1\s+|\s*$))</string>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
 			<string>source.renpy.screen</string>
 			<key>patterns</key>
@@ -606,7 +606,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^(?!(\1\s+|\s*$))</string>
+					<string>^(?!(\1\s+|\s*#.*$))</string>
 					<key>name</key>
 					<string>source.renpy.atl</string>
 					<key>patterns</key>
@@ -648,7 +648,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^(?!(\1\s+|\s*$))</string>
+					<string>^(?!(\1\s+|\s*#.*$))</string>
 					<key>name</key>
 					<string>source.renpy.atl</string>
 					<key>patterns</key>
@@ -688,7 +688,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>^(?!(\1\s+|\s*$))</string>
+					<string>^(?!(\1\s+|\s*#.*$))</string>
 					<key>name</key>
 					<string>source.renpy.transform</string>
 					<key>patterns</key>
