@@ -6,6 +6,6 @@
       { "trigger": "python", "contents": "python:\n\n\t$0" },
       { "trigger": "init", "contents": "init:\n\n\t$0" },
       { "trigger": "define", "contents": "define: $0" },
-      { "trigger": "image", "contents": "image $0 = ''" },
+      { "trigger": "image", "contents": "image ${1:[imageName]} = '${2:[fileName]}'" },
    ]
 }
