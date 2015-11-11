@@ -11,3 +11,6 @@ Changes:
 -Unindented comments no longer interfere with contexts
 
 New:
+
+Third-party contributions:
+-itsaferbie added tabbing support for the "image" and "menu" autocompletions
