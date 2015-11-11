@@ -2,6 +2,8 @@ Sublime Renpy v1.1.14
 ======================
 
 Bugfixes:
+-Moved RenpyLanguage out of the python context, so normal .py files don't receive Renpy autocompletes
+-Made custom keymaps (ctrl/super + i/b/u) specific to RenpyLanguage, so they won't affect .py files anymore
 
 Improvements:
 

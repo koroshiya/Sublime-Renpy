@@ -57,6 +57,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#transform</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#ingame</string>
 				</dict>
 				<dict>
@@ -69,7 +73,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -118,6 +122,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#transform</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#screen</string>
 				</dict>
 				<dict>
@@ -130,7 +138,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -160,7 +168,7 @@
 			<key>end</key>
 			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
-			<string>source.python.renpy.init</string>
+			<string>source.renpy.python.init</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -169,7 +177,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -212,7 +220,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -222,7 +230,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>source.python</string>
+			<string>#source_python</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -308,7 +316,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -374,7 +382,7 @@
 			<key>end</key>
 			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
-			<string>source.python.renpy</string>
+			<string>source.renpy.python</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -383,7 +391,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -402,7 +410,7 @@
 			<key>end</key>
 			<string>^(?!(\1\s+|\s*#.*$))</string>
 			<key>name</key>
-			<string>source.python.renpy.init</string>
+			<string>source.renpy.python.init</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -415,7 +423,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -437,7 +445,7 @@
 			<key>match</key>
 			<string>(\h*)(\$)((\s*)([\w_\.]+))*</string>
 			<key>name</key>
-			<string>source.python.renpy</string>
+			<string>source.renpy.python</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -446,7 +454,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -468,7 +476,7 @@
 			<key>match</key>
 			<string>(\h*)(\$)((\s*)([\w_\.]+))*</string>
 			<key>name</key>
-			<string>source.python.renpy.init</string>
+			<string>source.renpy.python.init</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -481,7 +489,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -539,6 +547,15 @@
 				</dict>
 			</array>
 		</dict>
+		<key>source_python</key>
+		<dict>
+			<key>comment</key>
+			<string>Context for python statements + Renpy autocompletes</string>
+			<key>include</key>
+			<string>source.python</string>
+			<key>name</key>
+			<string>source.renpy.python</string>
+		</dict>
 		<key>string_quoted_double</key>
 		<dict>
 			<key>begin</key>
@@ -546,7 +563,7 @@
 			<key>end</key>
 			<string>(?&lt;!\\)"</string>
 			<key>name</key>
-			<string>string.quoted.double.single-line.python</string>
+			<string>string.quoted.double.single-line.python.renpy</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -564,7 +581,7 @@
 			<key>end</key>
 			<string>(?&lt;!\\)'</string>
 			<key>name</key>
-			<string>string.quoted.single.single-line.python</string>
+			<string>string.quoted.single.single-line.python.renpy</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -617,7 +634,7 @@
 						</dict>
 						<dict>
 							<key>include</key>
-							<string>source.python</string>
+							<string>#source_python</string>
 						</dict>
 					</array>
 				</dict>
@@ -659,7 +676,7 @@
 						</dict>
 						<dict>
 							<key>include</key>
-							<string>source.python</string>
+							<string>#source_python</string>
 						</dict>
 					</array>
 				</dict>
@@ -673,7 +690,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>^(\h*)(transform|image|scene|show)((\s+)(\w+))+(\s*)((\(.*\))(\s*))?:</string>
+					<string>^(\h*)(transform|image|scene|show)(\s+\w+)+(\s*(\(.*\)))?\s*:\s*$</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>2</key>
@@ -681,7 +698,7 @@
 							<key>name</key>
 							<string>keyword.control.flow.renpy</string>
 						</dict>
-						<key>3</key>
+						<key>5</key>
 						<dict>
 							<key>name</key>
 							<string>variable.renpy</string>
@@ -699,7 +716,7 @@
 						</dict>
 						<dict>
 							<key>include</key>
-							<string>source.python</string>
+							<string>#source_python</string>
 						</dict>
 					</array>
 				</dict>

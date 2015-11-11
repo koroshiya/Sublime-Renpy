@@ -21,10 +21,11 @@
             "patterns": [
                 {"include": "#string_quoted_single"},
                 {"include": "#string_quoted_double"},
+                {"include": "#transform"},
                 {"include": "#ingame"},
                 {"include": "#python_block"},
                 {"include": "#python_line"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy.ingame"
@@ -45,10 +46,11 @@
                     "patterns": [{"include": "#imagemap"}],
                     "end": "^(?!(\\1\\s+|\\s*#.*$))"
                 },
+                {"include": "#transform"},
                 {"include": "#screen"},
                 {"include": "#python_block"},
                 {"include": "#python_line"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy.screen"
@@ -67,10 +69,10 @@
             },
             "patterns": [
                 {"include": "#init"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
-            "name": "source.python.renpy.init"
+            "name": "source.renpy.python.init"
         },
 
         {
@@ -84,17 +86,22 @@
                 {"include":"#transform"},
                 {"include":"#default"},
                 {"include":"#style"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
             "name": "source.renpy"
         },
 
         {"include": "#default"},
-        {"include": "source.python"}
+        {"include": "#source_python"}
     ],
 
     "repository": {
+        "source_python":{
+            "comment": "Context for python statements + Renpy autocompletes",
+            "name": "source.renpy.python",
+            "include": "source.python"
+        },
         "default":{
             "comment": "Default context",
             "match": "\\b(transform|image|define|persistent)\\b",
@@ -119,7 +126,7 @@
                 }
             ],
             "end": "(?<!\\\\)'",
-            "name": "string.quoted.single.single-line.python"
+            "name": "string.quoted.single.single-line.python.renpy"
         },
         "string_quoted_double":{
             "begin": "(?<!\\\\)\"",
@@ -130,7 +137,7 @@
                 }
             ],
             "end": "(?<!\\\\)\"",
-            "name": "string.quoted.double.single-line.python"
+            "name": "string.quoted.double.single-line.python.renpy"
         },
         "atl":{
             "comment": "ATL transform", 
@@ -154,14 +161,14 @@
             "comment": "ATL blocks",
             "patterns": [ 
                 {
-                    "begin": "^(\\h*)(transform|image|scene|show)((\\s+)(\\w+))+(\\s*)((\\(.*\\))(\\s*))?:",
+                    "begin": "^(\\h*)(transform|image|scene|show)(\\s+\\w+)+(\\s*(\\(.*\\)))?\\s*:\\s*$",
                     "beginCaptures":{
                         "2":{"name":"keyword.control.flow.renpy"},
-                        "3":{"name":"variable.renpy"}
+                        "5":{"name":"variable.renpy"}
                     },
                     "patterns": [
                         {"include": "#atl"},
-                        {"include": "source.python"}
+                        {"include": "#source_python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.transform"
@@ -198,7 +205,7 @@
                     },
                     "patterns": [
                         {"include": "#atl"},
-                        {"include": "source.python"}
+                        {"include": "#source_python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.atl"
@@ -213,7 +220,7 @@
                     },
                     "patterns": [
                         {"include": "#atl"},
-                        {"include": "source.python"}
+                        {"include": "#source_python"}
                     ],
                     "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.atl"
@@ -263,7 +270,7 @@
                    "name": "variable.parameter.renpy"
                 },
                 {"include": "#screen"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ]
         },
 
@@ -285,22 +292,22 @@
             },
             "patterns": [
                 {"include": "#python"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
-            "name": "source.python.renpy"
+            "name": "source.renpy.python"
         },
 
         "python_line": {
             "match": "(\\h*)(\\$)((\\s*)([\\w_\\.]+))*",
-            "name":"source.python.renpy",
+            "name":"source.renpy.python",
             "captures": {
                 "2":{"name":"keyword.control.flow.renpy"},
                 "5":{"name":"variable.renpy"}
             },
             "patterns": [
                 {"include": "#python"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ]
         },
 
@@ -312,15 +319,15 @@
             "patterns": [
                 {"include": "#python"},
                 {"include": "#init"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
-            "name": "source.python.renpy.init"
+            "name": "source.renpy.python.init"
         },
 
         "python_line_init": {
             "match": "(\\h*)(\\$)((\\s*)([\\w_\\.]+))*",
-            "name":"source.python.renpy.init",
+            "name":"source.renpy.python.init",
             "captures": {
                 "2":{"name":"keyword.control.flow.renpy"},
                 "5":{"name":"variable.renpy"}
@@ -328,7 +335,7 @@
             "patterns": [
                 {"include": "#python"},
                 {"include": "#init"},
-                {"include": "source.python"}
+                {"include": "#source_python"}
             ]
         }
 
