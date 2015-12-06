@@ -21,6 +21,7 @@
             "patterns": [
                 {"include": "#string_quoted_single"},
                 {"include": "#string_quoted_double"},
+                {"include": "#string_quoted_backtick"},
                 {"include": "#transform"},
                 {"include": "#ingame"},
                 {"include": "#python_block"},
@@ -138,6 +139,17 @@
             ],
             "end": "(?<!\\\\)\"",
             "name": "string.quoted.double.single-line.python.renpy"
+        },
+        "string_quoted_backtick":{
+            "begin": "(?<!\\\\)`",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.backslash.regex.python"
+                }
+            ],
+            "end": "(?<!\\\\)`",
+            "name": "string.quoted.single.single-line.python.renpy"
         },
         "atl":{
             "comment": "ATL transform", 
