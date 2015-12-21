@@ -391,21 +391,19 @@
 		</dict>
 		<key>python_line</key>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>^(\s*)(\$)</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.flow.renpy</string>
 				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
 			</dict>
-			<key>match</key>
-			<string>(\h*)(\$)((\s*)([\w_\.]+))*</string>
+			<key>end</key>
+			<string>^(?!(
+))</string>
 			<key>name</key>
 			<string>source.renpy.python</string>
 			<key>patterns</key>
@@ -422,21 +420,19 @@
 		</dict>
 		<key>python_line_init</key>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>^(\s*)(\$)</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.flow.renpy</string>
 				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
 			</dict>
-			<key>match</key>
-			<string>(\h*)(\$)((\s*)([\w_\.]+))*</string>
+			<key>end</key>
+			<string>^(?!(
+))</string>
 			<key>name</key>
 			<string>source.renpy.python.init</string>
 			<key>patterns</key>
