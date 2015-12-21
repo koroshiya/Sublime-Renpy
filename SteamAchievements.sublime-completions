@@ -1,0 +1,14 @@
+{
+   "scope": "source.renpy.python",
+   "completions":
+   [
+      { "trigger": "achievement.Sync", "contents": "achievement.Sync()" },
+      { "trigger": "achievement.clear", "contents": "achievement.clear('${1:[achievementName]}')" },
+      { "trigger": "achievement.clear_all", "contents": "achievement.clear_all()" },
+      { "trigger": "achievement.grant", "contents": "achievement.grant('${1:[achievementName]}')" },
+      { "trigger": "achievement.has", "contents": "achievement.has('${1:[achievementName]}')" },
+      { "trigger": "achievement.progress", "contents": "achievement.progress('${1:[achievementName]}', ${2:[unitsTowardsCompletion]})" },
+      { "trigger": "achievement.register", "contents": "achievement.register('${1:[achievementName]}')" },
+      { "trigger": "achievement.sync", "contents": "achievement.sync()" },
+   ]
+}

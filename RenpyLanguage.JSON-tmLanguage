@@ -69,7 +69,7 @@
                 "0":{"name":"keyword.control.flow.renpy"}
             },
             "patterns": [
-                {"include": "#init"},
+                {"include": "#python"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
@@ -155,7 +155,7 @@
             "comment": "ATL transform", 
             "patterns": [
                 {
-                    "match": "\\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\\b",
+                    "match": "\\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|adjust_spacing|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\\b",
                     "name": "variable.parameter.renpy"
                 },
                 {
@@ -185,23 +185,6 @@
                     "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.transform"
                 }
-            ]
-        },
-        "config":{
-            "comment": "Config variables",
-            "match": "(\\h*)(config\\.)(\\w+)",
-            "name":"keyword.control.flow.renpy",
-            "captures": {
-                "2":{"name":"keyword.control.flow.renpy"},
-                "3":{"name":"variable.renpy"}
-            }
-        },
-
-        "init": {
-            "comment": "Renpy initialization code, such as config entries",
-            "patterns": [
-                {"include": "#config"},
-                {"include": "#python"}
             ]
         },
 
@@ -288,11 +271,11 @@
 
         "python": {
             "comment": "Renpy python variables",
-            "match": "(\\h*)(renpy\\.)(\\w+)",
+            "match": "(\\h*)((renpy|config|achievement)\\.)(\\w+)",
             "name":"keyword.control.flow.renpy",
             "captures": {
-                "2":{"name":"keyword.control.flow.renpy"},
-                "3":{"name":"variable.renpy"}
+                "3":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
             }
             
         },
@@ -330,7 +313,6 @@
             },
             "patterns": [
                 {"include": "#python"},
-                {"include": "#init"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
@@ -346,7 +328,6 @@
             },
             "patterns": [
                 {"include": "#python"},
-                {"include": "#init"},
                 {"include": "#source_python"}
             ]
         }

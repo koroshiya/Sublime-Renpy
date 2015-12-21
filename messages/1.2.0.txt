@@ -1,0 +1,16 @@
+Sublime Renpy v1.2.0
+======================
+
+Bugfixes:
+
+Improvements:
+-Added tab controls for more completions
+
+Changes:
+-ATL completions added to transform context, so transform parameters can be auto-completed
+-Config completions moved to python context, since config can be set outside of init
+
+New:
+-Added completions for Steam achievements (Renpy 6.99.6+)
+-Added 'adjust_spacing' ATL property (Renpy 6.99.7+)
+-Added config variables: quit_on_mobile_background, replace_text, save_on_mobile_background (Renpy 6.99.7+)

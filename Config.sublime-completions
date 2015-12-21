@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpy.python.init",
+   "scope": "source.renpy.python",
    "completions":
    [
       { "trigger": "config.adjust_view_size", "contents": "config.adjust_view_size = $0" },
@@ -141,12 +141,15 @@
 
       { "trigger": "config.quicksave_slots", "contents": "config.quicksave_slots = $0" },
       { "trigger": "config.quit_action", "contents": "config.quit_action = $0" },
+      { "trigger": "config.quit_on_mobile_background", "contents": "config.quit_on_mobile_background = $0" },
 
+      { "trigger": "config.replace_text", "contents": "config.replace_text = $0" },
       { "trigger": "config.rollback_enabled", "contents": "config.rollback_enabled = $0" },
       { "trigger": "config.rollback_length", "contents": "config.rollback_length = $0" },
 
       { "trigger": "config.save_directory", "contents": "config.save_directory = '$0'" },
       { "trigger": "config.save_dump", "contents": "config.save_dump = $0" },
+      { "trigger": "config.save_on_mobile_background", "contents": "config.save_on_mobile_background = $0" },
       { "trigger": "config.save_json_callbacks", "contents": "config.save_json_callbacks = [$0]" },
       { "trigger": "config.save_physical_size", "contents": "config.save_physical_size = $0" },
       { "trigger": "config.savedir", "contents": "config.savedir = $0" },

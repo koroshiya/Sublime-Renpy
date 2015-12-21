@@ -177,7 +177,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#init</string>
+					<string>#python</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -247,7 +247,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\b</string>
+					<string>\b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|adjust_spacing|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse)\b</string>
 					<key>name</key>
 					<string>variable.parameter.renpy</string>
 				</dict>
@@ -258,28 +258,6 @@
 					<string>variable.parameter.renpy</string>
 				</dict>
 			</array>
-		</dict>
-		<key>config</key>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.flow.renpy</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.renpy</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Config variables</string>
-			<key>match</key>
-			<string>(\h*)(config\.)(\w+)</string>
-			<key>name</key>
-			<string>keyword.control.flow.renpy</string>
 		</dict>
 		<key>default</key>
 		<dict>
@@ -333,32 +311,16 @@
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
-		<key>init</key>
-		<dict>
-			<key>comment</key>
-			<string>Renpy initialization code, such as config entries</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#config</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#python</string>
-				</dict>
-			</array>
-		</dict>
 		<key>python</key>
 		<dict>
 			<key>captures</key>
 			<dict>
-				<key>2</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.control.flow.renpy</string>
 				</dict>
-				<key>3</key>
+				<key>4</key>
 				<dict>
 					<key>name</key>
 					<string>variable.renpy</string>
@@ -367,7 +329,7 @@
 			<key>comment</key>
 			<string>Renpy python variables</string>
 			<key>match</key>
-			<string>(\h*)(renpy\.)(\w+)</string>
+			<string>(\h*)((renpy|config|achievement)\.)(\w+)</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
@@ -420,10 +382,6 @@
 				<dict>
 					<key>include</key>
 					<string>#python</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#init</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -486,10 +444,6 @@
 				<dict>
 					<key>include</key>
 					<string>#python</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#init</string>
 				</dict>
 				<dict>
 					<key>include</key>

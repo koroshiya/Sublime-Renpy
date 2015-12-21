@@ -2,10 +2,10 @@
    "scope": "source.renpy",
    "completions":
    [
-      { "trigger": "label", "contents": "label $0:\n\n\tpass" },
+      { "trigger": "label", "contents": "label ${1:[labelName]}:\n\n\t${2:[labelContent]}" },
       { "trigger": "python", "contents": "python:\n\n\t$0" },
       { "trigger": "init", "contents": "init:\n\n\t$0" },
-      { "trigger": "define", "contents": "define: $0" },
+      { "trigger": "define", "contents": "define ${1:[variable]} = ${2:[value]}" },
       { "trigger": "image", "contents": "image ${1:[imageName]} = '${2:[fileName]}'" },
    ]
 }
