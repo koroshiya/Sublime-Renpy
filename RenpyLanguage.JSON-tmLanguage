@@ -105,7 +105,7 @@
         },
         "default":{
             "comment": "Default context",
-            "match": "\\b(transform|image|define|persistent)\\b",
+            "match": "\\b(transform|image|define)\\b",
             "name":"keyword.control.flow.renpy",
             "patterns": [
                 {
@@ -271,7 +271,7 @@
 
         "python": {
             "comment": "Renpy python variables",
-            "match": "(\\h*)((renpy|config|achievement)\\.)(\\w+)",
+            "match": "(\\h*)((renpy|config|achievement|persistent)\\.)(\\w+)",
             "name":"keyword.control.flow.renpy",
             "captures": {
                 "3":{"name":"keyword.control.flow.renpy"},

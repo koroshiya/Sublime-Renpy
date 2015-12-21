@@ -1,0 +1,11 @@
+Sublime Renpy v1.2.1
+======================
+
+Bugfixes:
+-Moved persistent to python context
+
+Improvements:
+
+Changes:
+
+New:

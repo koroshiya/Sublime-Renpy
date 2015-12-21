@@ -264,7 +264,7 @@
 			<key>comment</key>
 			<string>Default context</string>
 			<key>match</key>
-			<string>\b(transform|image|define|persistent)\b</string>
+			<string>\b(transform|image|define)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 			<key>patterns</key>
@@ -329,7 +329,7 @@
 			<key>comment</key>
 			<string>Renpy python variables</string>
 			<key>match</key>
-			<string>(\h*)((renpy|config|achievement)\.)(\w+)</string>
+			<string>(\h*)((renpy|config|achievement|persistent)\.)(\w+)</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>
