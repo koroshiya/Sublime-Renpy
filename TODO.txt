@@ -23,5 +23,5 @@ Python early block:
 -renpy.atl_warper decorator
 
 Statement equivalents:
--PushMove(time, mode="pushright")
--PlayCharacterVoice()
+-{ "trigger": "PushMove", "contents": "PushMove(time=$0, mode='pushright' }
+-{ "trigger": "PlayCharacterVoice", "contents": "PlayCharacterVoice('${1:[voice_tag]}', '${2:[sample]}')" },

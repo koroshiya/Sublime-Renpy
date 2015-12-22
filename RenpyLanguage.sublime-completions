@@ -49,7 +49,6 @@
       { "trigger": "Notify", "contents": "Notify(message=$0)" },
       { "trigger": "OpenURL", "contents": "OpenURL(url=$0)" },
       { "trigger": "Play", "contents": "Play('${1:[channel]}', '${2:[file]}', selected=None)" },
-      { "trigger": "PlayCharacterVoice", "contents": "PlayCharacterVoice('${1:[voice_tag]}', '${2:[sample]}')" },
       { "trigger": "Position", "contents": "Position($0)" },
       { "trigger": "Preference", "contents": "Preference(name='$0', value=None)" },
       { "trigger": "Queue", "contents": "Queue(channel=$0, file=)" },
