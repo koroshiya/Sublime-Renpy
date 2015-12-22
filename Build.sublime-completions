@@ -1,0 +1,20 @@
+{
+   "scope": "source.renpy.python.init",
+   "completions":
+   [
+      { "trigger": "build.directory_name", "contents": "build.directory_name = '$0'" },
+      { "trigger": "build.executable_name", "contents": "build.executable_name = '$0'" },
+      { "trigger": "build.include_update", "contents": "build.include_update = '$0'" },
+      { "trigger": "build.exclude_empty_directories", "contents": "build.exclude_empty_directories = $0" },
+      { "trigger": "build.destination", "contents": "build.destination = '$0'" },
+      { "trigger": "build.allow_integrated_gpu", "contents": "build.allow_integrated_gpu = $0" },
+
+      { "trigger": "build.archive", "contents": "build.archive(name='$0', file_list='all')" },
+      { "trigger": "build.classify", "contents": "build.classify('${1:[pattern]}', '${2:[file_list]}')" },
+      { "trigger": "build.clear", "contents": "build.clear()" },
+      { "trigger": "build.documentation", "contents": "build.documentation(pattern='$0')" },
+      { "trigger": "build.executable", "contents": "build.executable(pattern='$0')" },
+      { "trigger": "build.package", "contents": "build.package('${1:[packageName]}', '${2:[packageFormat]}', [${3:[file_lists]}, ], description=None, update=True, dlc=False, hidden=False)" },
+
+    ]
+}
