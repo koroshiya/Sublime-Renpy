@@ -1,0 +1,26 @@
+{
+   "scope": "source.renpy.python",
+   "completions":
+   [
+      { "trigger": "_get_voice_info", "contents": "_get_voice_info()" },
+      { "trigger": "voice", "contents": "voice(filename='$0', tag=None)" },
+      { "trigger": "voice_can_replay", "contents": "voice_can_replay()" },
+      { "trigger": "voice_replay", "contents": "voice_replay()" },
+      { "trigger": "voice_sustain", "contents": "voice_sustain(ignored='$0')" },
+
+      { "trigger": "persistent", "contents": "persistent.${1:[variable]} = ${2:[value]}" },
+
+      { "trigger": "renpy.call_screen", "contents": "renpy.call_screen(_screen_name='$0')" },
+      { "trigger": "renpy.define_screen", "contents": "renpy.define_screen('${1:[screenName]}', '${2:[displayFunction]}', modal='False', zorder='0', tag=None, variant=None)" },
+      { "trigger": "renpy.get_screen", "contents": "renpy.get_screen(name='$0', layer='screens')" },
+      { "trigger": "renpy.get_widget", "contents": "renpy.get_widget('${1:[screen]}', '${2:[id]}', layer='screens')" },
+      { "trigger": "renpy.get_widget_properties", "contents": "renpy.get_widget_properties(id='$0', screen=None, layer='screens')" },
+      { "trigger": "renpy.hide_screen", "contents": "renpy.hide_screen(tag='$0', layer='screens')" },
+      { "trigger": "renpy.predicting", "contents": "renpy.predicting()" },
+      { "trigger": "renpy.show_screen", "contents": "renpy.show_screen(_screen_name='$0')" },
+      { "trigger": "renpy.start_predict_screen", "contents": "renpy.start_predict_screen(_screen_name='$0')" },
+      { "trigger": "renpy.stop_predict_screen", "contents": "renpy.stop_predict_screen(name='$0')" },
+      { "trigger": "renpy.variant", "contents": "renpy.variant(name='$0')" },
+
+   ]
+}
