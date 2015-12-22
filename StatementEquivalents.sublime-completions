@@ -53,5 +53,7 @@
       { "trigger": "MultipleTransition", "contents": "MultipleTransition($0)" },
       { "trigger": "Pause", "contents": "Pause(delay=$0)" },
       { "trigger": "Pixellate", "contents": "Pixellate(time=$0, steps=)" },
+
+      { "trigger": "persistent", "contents": "persistent.${1:[variable]} = ${2:[value]}" },
    ]
 }

@@ -11,3 +11,4 @@ Improvements:
 Changes:
 
 New:
+-Added basic autocomplete for persistent
