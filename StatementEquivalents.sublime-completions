@@ -1,7 +1,7 @@
 {
    "scope": "source.renpy.python",
    "completions":
-   [  '${1:[achievementName]}'
+   [
       { "trigger": "renpy.say", "contents": "renpy.say('${1:[whoIsTalking]}', '${2:[whatIsSaid]}', interact=True)" },
       { "trigger": "renpy.display_menu", "contents": "renpy.display_menu(items=('${1:[option]}','${2:[returnValue]}'), interact=True, screen='choice')" },
       { "trigger": "renpy.get_at_list", "contents": "renpy.get_at_list(name='$0', layer='master')" },

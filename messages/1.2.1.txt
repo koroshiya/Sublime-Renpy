@@ -4,6 +4,7 @@ Sublime Renpy v1.2.1
 Bugfixes:
 -Moved persistent to python context
 -Fixed single-line python statement highlighting
+-Fixed statement equivalents autocomplete typo
 
 Improvements:
 
