@@ -230,6 +230,10 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#define</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#default</string>
 		</dict>
 		<dict>
@@ -264,7 +268,7 @@
 			<key>comment</key>
 			<string>Default context</string>
 			<key>match</key>
-			<string>\b(transform|image|define)\b</string>
+			<string>\b(transform|image)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 			<key>patterns</key>
@@ -279,6 +283,35 @@
 							<string>#python</string>
 						</dict>
 					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>begin</key>
+			<string>^(\s*)(define)(\s+)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.flow.renpy</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^(?!(
+))</string>
+			<key>name</key>
+			<string>source.renpy.python</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#python</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>

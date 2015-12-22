@@ -93,7 +93,10 @@
             "name": "source.renpy"
         },
 
+        {"include": "#define"},
+
         {"include": "#default"},
+        
         {"include": "#source_python"}
     ],
 
@@ -105,7 +108,7 @@
         },
         "default":{
             "comment": "Default context",
-            "match": "\\b(transform|image|define)\\b",
+            "match": "\\b(transform|image)\\b",
             "name":"keyword.control.flow.renpy",
             "patterns": [
                 {
@@ -267,6 +270,19 @@
                 {"include": "#screen"},
                 {"include": "#source_python"}
             ]
+        },
+
+        "define":{
+            "begin": "^(\\s*)(define)(\\s+)",
+            "beginCaptures": {
+                "2":{"name":"keyword.control.flow.renpy"}
+            },
+            "patterns": [
+                {"include": "#python"},
+                {"include": "#source_python"}
+            ],
+            "end": "^(?!(\n))",
+            "name":"source.renpy.python"
         },
 
         "python": {

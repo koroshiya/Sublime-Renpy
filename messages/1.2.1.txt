@@ -7,6 +7,7 @@ Bugfixes:
 -Fixed statement equivalents autocomplete typo
 
 Improvements:
+-Updated define command to reflect improvements in Renpy 6.99.7
 
 Changes:
 
