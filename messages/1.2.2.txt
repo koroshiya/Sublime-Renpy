@@ -9,3 +9,4 @@ Changes:
 
 New:
 -Added autocomplete for build functions/variables
+-Added syntax highlighting for build, style and theme functions/variables in init python context

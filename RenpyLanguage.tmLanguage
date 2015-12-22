@@ -181,6 +181,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#python_init</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#source_python</string>
 				</dict>
 			</array>
@@ -418,9 +422,35 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#python_init</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#source_python</string>
 				</dict>
 			</array>
+		</dict>
+		<key>python_init</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.flow.renpy</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>variable.renpy</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Renpy python init variables</string>
+			<key>match</key>
+			<string>(\h*)((build|style|theme)\.)(\w+)</string>
+			<key>name</key>
+			<string>keyword.control.flow.renpy</string>
 		</dict>
 		<key>python_line</key>
 		<dict>
@@ -473,6 +503,10 @@
 				<dict>
 					<key>include</key>
 					<string>#python</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#python_init</string>
 				</dict>
 				<dict>
 					<key>include</key>

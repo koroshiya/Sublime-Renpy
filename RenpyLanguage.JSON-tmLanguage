@@ -70,6 +70,7 @@
             },
             "patterns": [
                 {"include": "#python"},
+                {"include": "#python_init"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
@@ -96,7 +97,7 @@
         {"include": "#define"},
 
         {"include": "#default"},
-        
+
         {"include": "#source_python"}
     ],
 
@@ -293,7 +294,16 @@
                 "3":{"name":"keyword.control.flow.renpy"},
                 "4":{"name":"variable.renpy"}
             }
-            
+        },
+
+        "python_init": {
+            "comment": "Renpy python init variables",
+            "match": "(\\h*)((build|style|theme)\\.)(\\w+)",
+            "name":"keyword.control.flow.renpy",
+            "captures": {
+                "3":{"name":"keyword.control.flow.renpy"},
+                "4":{"name":"variable.renpy"}
+            }
         },
 
         "python_block": {
@@ -329,6 +339,7 @@
             },
             "patterns": [
                 {"include": "#python"},
+                {"include": "#python_init"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
@@ -342,6 +353,7 @@
             },
             "patterns": [
                 {"include": "#python"},
+                {"include": "#python_init"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\n))",
