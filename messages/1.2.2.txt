@@ -4,9 +4,11 @@ Sublime Renpy v1.2.2
 Bugfixes:
 
 Improvements:
+-Added more tab auto completions
 
 Changes:
 
 New:
 -Added autocomplete for build functions/variables
 -Added syntax highlighting for build, style and theme functions/variables in init python context
+-Added voice functions, the voice statement, and voice screen actions

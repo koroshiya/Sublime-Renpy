@@ -43,6 +43,12 @@
       { "trigger": "renpy.stop_predict", "contents": "renpy.stop_predict(trans=$0, before=None, after=None)" },
       { "trigger": "image_exists", "contents": "image_exists(name='$0')" },
 
+      { "trigger": "_get_voice_info", "contents": "_get_voice_info()" },
+      { "trigger": "voice", "contents": "voice(filename='$0', tag=None)" },
+      { "trigger": "voice_can_replay", "contents": "voice_can_replay()" },
+      { "trigger": "voice_replay", "contents": "voice_replay()" },
+      { "trigger": "voice_sustain", "contents": "voice_sustain(ignored='$0')" },
+
       { "trigger": "AlphaDissolve", "contents": "AlphaDissolve(control=$0, delay=0.0, alpha=False, reverse=False)" },
       { "trigger": "ComposeTransition", "contents": "ComposeTransition(trans=$0, before=None, after=None)" },
       { "trigger": "CropMove", "contents": "CropMove(time=$0, mode='slideright', startcrop=(0.0, 0.0, 0.0, 1.0), startpos=(0.0, 0.0), endcrop=(0.0, 0.0, 1.0, 1.0), endpos=(0.0, 0.0), topnew=True)" },

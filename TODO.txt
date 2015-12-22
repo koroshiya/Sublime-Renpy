@@ -1,1 +1,27 @@
--transform context not working within init blocks
+Once Renpy 6.99.8 is officially released, add:
+
+Config variables:
+-config.tag_layer
+-config.default_tag_layer
+-config.tag_transform
+-config.tag_zorder
+-config.side_image_prefix_tag = 'side'
+-config.side_image_null = Null()
+-config.side_image_same_transform = None
+-config.side_image_change_transform = None
+-config.default_music_volume
+-config.default_sfx_volume
+-config.default_voice_volume
+-config.overlay_screens
+
+Renpy functions:
+-renpy.add_layer()
+-renpy.is_start_interact()
+-renpy.maximum_framerate()
+
+Python early block:
+-renpy.atl_warper decorator
+
+Statement equivalents:
+-PushMove(time, mode="pushright")
+-PlayCharacterVoice()

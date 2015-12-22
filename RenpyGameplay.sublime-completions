@@ -4,6 +4,7 @@
    [
       { "trigger": "play", "contents": "play ${1:[mediaType]} ${2:[whatToPlay]}" },
       { "trigger": "queue", "contents": "queue $0" },
+      { "trigger": "voice", "contents": "voice $0" },
       { "trigger": "stop", "contents": "stop $0" },
       { "trigger": "hide", "contents": "hide $0" },
       { "trigger": "scene", "contents": "scene $0" },
