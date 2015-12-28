@@ -9,3 +9,4 @@ Changes:
 
 New:
 -Added completions for screen functions
+-Added new config options applicable to Renpy 6.99.8
