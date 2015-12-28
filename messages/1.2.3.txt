@@ -4,9 +4,11 @@ Sublime Renpy v1.2.3
 Bugfixes:
 
 Improvements:
+-Added missing renpy python functions
 
 Changes:
 
 New:
 -Added completions for screen functions
 -Added new config options applicable to Renpy 6.99.8
+-Added new functions applicable to Renpy 6.99.8
