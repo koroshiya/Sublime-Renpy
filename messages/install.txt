@@ -3,5 +3,5 @@ Sublime Renpy
 
 Thank you for installing Sublime Renpy!
 To make this your default Renpy script editor, open a `.rpy` file.
-Select `View -> Syntax -> Open all with current extension as... -> Renpy Language`
+Select `View -> Syntax -> Open all with current extension as... -> RenpyLanguage`
 and you should be all set.
