@@ -1,3 +1,11 @@
 {
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"indent_guide_options":
+	[
+    	"draw_normal",
+		"draw_active"
+	],
+	"spell_check": true,
+	"spelling_selector": "source.renpy.ingame string.quoted.single.single-line.python.renpy, source.renpy.ingame string.quoted.double.single-line.python.renpy",
+	
 }
