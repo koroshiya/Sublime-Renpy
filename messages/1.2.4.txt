@@ -1,0 +1,14 @@
+Sublime Renpy v1.2.4
+======================
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+
+New:
+-Intented lines now use "guides" by default, so it's easier to see indenting.
+This is highly dependent on the theme you're using.
+-Spell check enabled by default.
+-Spell check limited to dialogue.
