@@ -11,3 +11,4 @@ Changes:
 New:
 -Added renpy.run command
 -Added PauseAudio action
+-Added highlighting for new default audio channel
