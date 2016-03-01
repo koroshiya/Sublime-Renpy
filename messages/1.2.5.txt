@@ -1,0 +1,11 @@
+Sublime Renpy v1.2.5
+======================
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+
+New:
+-Added renpy.run command

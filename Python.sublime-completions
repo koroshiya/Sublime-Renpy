@@ -104,6 +104,7 @@
       { "trigger": "renpy.reset_physical_size", "contents": "renpy.reset_physical_size()" },
       { "trigger": "renpy.restart_interaction", "contents": "renpy.restart_interaction()" },
       { "trigger": "renpy.return_statement", "contents": "renpy.return_statement()" },
+      { "trigger": "renpy.run", "contents": "renpy.run(action=$0)" },
       
       { "trigger": "renpy.say", "contents": "renpy.say('${1:[whoIsTalking]}', '${2:[whatIsSaid]}', interact=True)" },
       { "trigger": "renpy.scene", "contents": "renpy.scene(layer='master')" },
