@@ -6,6 +6,8 @@ Bugfixes:
 Improvements:
 
 Changes:
+-Changed default arguments for EndReplay and Quit
 
 New:
 -Added renpy.run command
+-Added PauseAudio action
