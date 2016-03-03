@@ -6,6 +6,6 @@
 		"draw_active"
 	],
 	"spell_check": true,
-	"spelling_selector": "source.renpy.ingame string.quoted.single.single-line.python.renpy, source.renpy.ingame string.quoted.double.single-line.python.renpy",
+	"spelling_selector": "source.renpy.ingame string.quoted.single.single-line.python.renpy, source.renpy.ingame string.quoted.double.single-line.python.renpy"
 	
 }
