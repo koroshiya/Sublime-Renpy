@@ -546,7 +546,7 @@
 					<key>comment</key>
 					<string>renpy keywords</string>
 					<key>match</key>
-					<string>\b(add|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\b</string>
+					<string>\b(add|audio|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\b</string>
 					<key>name</key>
 					<string>keyword.control.flow.renpy</string>
 				</dict>
@@ -593,6 +593,12 @@
 					<key>name</key>
 					<string>constant.character.escape.backslash.regex.python</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>\{(.*?)\}</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
 			</array>
 		</dict>
 		<key>string_quoted_double</key>
@@ -611,6 +617,12 @@
 					<key>name</key>
 					<string>constant.character.escape.backslash.regex.python</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>\{(.*?)\}</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
 			</array>
 		</dict>
 		<key>string_quoted_single</key>
@@ -626,6 +638,12 @@
 				<dict>
 					<key>match</key>
 					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\{(.*?)\}</string>
 					<key>name</key>
 					<string>constant.character.escape.backslash.regex.python</string>
 				</dict>

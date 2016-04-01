@@ -128,6 +128,9 @@
                 {
                     "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
                     "name": "constant.character.escape.backslash.regex.python"
+                },{
+                    "match": "\\{(.*?)\\}",
+                    "name": "constant.character.escape.backslash.regex.python"
                 }
             ],
             "end": "(?<!\\\\)'",
@@ -139,6 +142,9 @@
                 {
                     "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
                     "name": "constant.character.escape.backslash.regex.python"
+                },{
+                    "match": "\\{(.*?)\\}",
+                    "name": "constant.character.escape.backslash.regex.python"
                 }
             ],
             "end": "(?<!\\\\)\"",
@@ -149,6 +155,9 @@
             "patterns": [
                 {
                     "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.backslash.regex.python"
+                },{
+                    "match": "\\{(.*?)\\}",
                     "name": "constant.character.escape.backslash.regex.python"
                 }
             ],

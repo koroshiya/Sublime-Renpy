@@ -8,3 +8,5 @@ Improvements:
 Changes:
 
 New:
+-Added missing "audio" keyword from 1.2.5
+-Added highlighting and context switching for {} braces in dialogue
