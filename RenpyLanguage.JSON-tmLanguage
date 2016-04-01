@@ -242,18 +242,13 @@
                     "include":"#atl"
                 },
                 {
-                    "comment": "screen statements - http://www.renpy.org/doc/html/screens.html#screen-statement", 
-                    "match": "\\b(modal|style_group|tag|variant|zorder)\\b", 
-                    "name": "keyword.control.flow.renpy"
-                },
-                {
                     "comment": "common properties - http://www.renpy.org/doc/html/screens.html#common-properties", 
                     "match": "\\b(at|default|id|style|focus)\\b", 
                     "name": "keyword.control.flow.renpy"
                 },
                 {
                     "comment": "renpy keywords", 
-                    "match": "\\b(add|audio|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\\b", 
+                    "match": "\\b(add|audio|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|key_event|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|style_prefix|style_suffix|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpgrid|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\\b", 
                     "name": "keyword.control.flow.renpy"
                 },
                 {
