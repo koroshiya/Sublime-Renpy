@@ -1,0 +1,10 @@
+Sublime Renpy v1.2.6
+======================
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+
+New:
