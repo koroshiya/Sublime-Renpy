@@ -34,6 +34,8 @@
       { "trigger": "FileUsedSlots", "contents": "FileUsedSlots(page=None, highest_first=True)" },
       { "trigger": "Function", "contents": "Function(callable=$0)" },
       { "trigger": "Gallery", "contents": "Gallery()" },
+      { "trigger": "GamepadCalibrate", "contents": "GamepadCalibrate()" },
+      { "trigger": "GamepadExists", "contents": "GamepadExists(developer=${1:True})" },
       { "trigger": "Help", "contents": "Help(help=None)" },
       { "trigger": "Hide", "contents": "Hide(screen=$0, transition=None)" },
       { "trigger": "HideInterface", "contents": "HideInterface()" },

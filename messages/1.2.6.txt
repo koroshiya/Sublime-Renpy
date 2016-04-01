@@ -13,3 +13,4 @@ New:
 -Added highlighting and context switching for {} braces in dialogue
 -Added highlighting for new properties "style_prefix" and "style_suffix"
 -Added highlighting for new widget "vgrid"
+-Added new commands "GamepadCalibrate" and "GamepadExists"
