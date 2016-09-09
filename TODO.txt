@@ -5,3 +5,7 @@
 -init offset
 "The new init offset statement makes it possible to apply a priority offset to statements that run at init time, including init, init python, define, default, style, and transform."
 
+Add UI autocompletes, like Frame and Borders: https://www.renpy.org/doc/html/displayables.html#Frame
+Preference autocompletes: https://www.renpy.org/doc/html/screen_actions.html#Preference
+Add build.itch_project
+Autocomplete for no-scope blocks like "screen" and "transform"

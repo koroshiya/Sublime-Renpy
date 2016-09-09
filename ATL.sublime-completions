@@ -42,6 +42,11 @@
       { "trigger": "xcenter", "contents": "xcenter $0" },
       { "trigger": "ycenter", "contents": "ycenter $0" },
       { "trigger": "debug", "contents": "debug $0" },
-      { "trigger": "events", "contents": "events $0" }
+      { "trigger": "events", "contents": "events $0" },
+      { "trigger": "xpan", "contents": "xpan ${1:None}" },
+      { "trigger": "ypan", "contents": "ypan ${1:None}" },
+      { "trigger": "xtile", "contents": "xtile ${1:1}" },
+      { "trigger": "ytile", "contents": "ytile ${1:1}" }
+
    ]
 }

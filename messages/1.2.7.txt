@@ -1,0 +1,19 @@
+Sublime Renpy v1.2.7
+======================
+
+This update is to facilitate changes and additions in the new Renpy 6.99.11 release.
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+-quit_action autocomplete now defaults to Quit()
+
+New:
+-Added new xpan, ypan, xtile and ytile properties
+-Added new afm_voice_delay, after_load_callbacks, defer_styles and enforce_window_max_size config options
+tts_voice
+-Added new renpy.get_refresh_rate autocomplete
+-Added highlighting for new properties "selected", "sensitive", "keysym", "alternate_keysym" and "arrowkeys"
+-Added highlighting for missed property "mousewheel"

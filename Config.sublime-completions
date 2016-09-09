@@ -7,6 +7,8 @@
       { "trigger": "config.afm_bonus", "contents": "config.afm_bonus = ${1:25}" },
       { "trigger": "config.afm_callback", "contents": "config.afm_callback = ${1:None}" },
       { "trigger": "config.afm_characters", "contents": "config.afm_characters = ${1:250}" },
+      { "trigger": "config.afm_voice_delay", "contents": "config.afm_voice_delay = ${1:.5}" },
+      { "trigger": "config.after_load_callbacks", "contents": "config.after_load_callbacks = [$0]" },
       { "trigger": "config.after_load_transition", "contents": "config.after_load_transition = ${1:None}" },
       { "trigger": "config.after_replay_callback", "contents": "config.after_replay_callback = ${1:None}" },
       { "trigger": "config.all_character_callbacks", "contents": "config.all_character_callbacks = [$0]" },
@@ -48,6 +50,7 @@
       { "trigger": "config.default_voice_sustain", "contents": "config.default_voice_sustain = ${1:False}" },
       { "trigger": "config.default_voice_volume", "contents": "config.default_voice_volume = ${1:1.0}" },
       { "trigger": "config.default_wait_for_voice", "contents": "config.default_wait_for_voice = ${1:True}" },
+      { "trigger": "config.defer_styles", "contents": "config.defer_styles = ${1:False}" },
       { "trigger": "config.developer", "contents": "config.developer = ${1:'auto'}" },
       { "trigger": "config.dispatch_gesture", "contents": "config.dispatch_gesture = $0" },
 
@@ -57,6 +60,7 @@
       { "trigger": "config.empty_window", "contents": "config.empty_window = $0" },
       { "trigger": "config.end_game_transition", "contents": "config.end_game_transition = ${1:None}" },
       { "trigger": "config.end_splash_transition", "contents": "config.end_splash_transition = ${1:None}" },
+      { "trigger": "config.enforce_window_max_size", "contents": "config.enforce_window_max_size = ${1:True}" },
       { "trigger": "config.enter_replay_transition", "contents": "config.enter_replay_transition = ${1:None}" },
       { "trigger": "config.enter_sound", "contents": "config.enter_sound = ${1:None}" },
       { "trigger": "config.enter_transition", "contents": "config.enter_transition = ${1:None}" },
@@ -148,7 +152,7 @@
       { "trigger": "config.python_callbacks", "contents": "config.python_callbacks = [$0]" },
 
       { "trigger": "config.quicksave_slots", "contents": "config.quicksave_slots = ${1:10}" },
-      { "trigger": "config.quit_action", "contents": "config.quit_action = $0" },
+      { "trigger": "config.quit_action", "contents": "config.quit_action = ${1:Quit()}" },
       { "trigger": "config.quit_on_mobile_background", "contents": "config.quit_on_mobile_background = ${1:False}" },
 
       { "trigger": "config.replace_text", "contents": "config.replace_text = ${1:None}" },
@@ -201,6 +205,7 @@
       { "trigger": "config.transient_layers", "contents": "config.transient_layers = ['${1:transient}']" },
       { "trigger": "config.transition_screens", "contents": "config.transition_screens = ${1:True}" },
       { "trigger": "config.translations", "contents": "config.translations = dict($0)" },
+      { "trigger": "config.tts_voice", "contents": "config.tts_voice = ${1:None}" },
 
       { "trigger": "config.variants", "contents": "config.variants = [$0]" },
       { "trigger": "config.version", "contents": "config.version = '${1:1.0}'"},

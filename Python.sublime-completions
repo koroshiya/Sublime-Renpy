@@ -46,6 +46,7 @@
       { "trigger": "renpy.get_mouse_pos", "contents": "renpy.get_mouse_pos()" },
       { "trigger": "renpy.get_physical_size", "contents": "renpy.get_physical_size()" },
       { "trigger": "renpy.get_placement", "contents": "renpy.get_placement(d=$0)" },
+      { "trigger": "renpy.get_refresh_rate", "contents": "renpy.get_refresh_rate(precision=${1:5})" },
       { "trigger": "renpy.get_renderer_info", "contents": "renpy.get_renderer_info()" },
       { "trigger": "renpy.get_say_attributes", "contents": "renpy.get_say_attributes()" },
       { "trigger": "renpy.get_screen", "contents": "renpy.get_screen(name='$0', layer='screens')" },
