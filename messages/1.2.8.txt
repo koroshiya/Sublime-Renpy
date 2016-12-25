@@ -1,0 +1,15 @@
+Sublime Renpy v1.2.8
+======================
+
+This update is to facilitate changes and additions in the new Renpy 6.99.12 release.
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+-exclude_empty_directories and allow_integrated_gpu now autocomplete to their default value of True
+
+New:
+-Added new mac_identity and missing include_old_themes build options
+-Added highlighting and autocomplete for new DisableAllInputValues function

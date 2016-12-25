@@ -5,9 +5,11 @@
       { "trigger": "build.directory_name", "contents": "build.directory_name = '$0'" },
       { "trigger": "build.executable_name", "contents": "build.executable_name = '$0'" },
       { "trigger": "build.include_update", "contents": "build.include_update = '$0'" },
-      { "trigger": "build.exclude_empty_directories", "contents": "build.exclude_empty_directories = $0" },
+      { "trigger": "build.exclude_empty_directories", "contents": "build.exclude_empty_directories = ${1:True}" },
       { "trigger": "build.destination", "contents": "build.destination = '$0'" },
-      { "trigger": "build.allow_integrated_gpu", "contents": "build.allow_integrated_gpu = $0" },
+      { "trigger": "build.allow_integrated_gpu", "contents": "build.allow_integrated_gpu = ${1:True}" },
+      { "trigger": "build.include_old_themes", "contents": "build.include_old_themes = ${1:True}" },
+      { "trigger": "build.mac_identity", "contents": "build.mac_identity = '$0'" },
 
       { "trigger": "build.archive", "contents": "build.archive(name='$0', file_list='all')" },
       { "trigger": "build.classify", "contents": "build.classify('${1:[pattern]}', '${2:[file_list]}')" },

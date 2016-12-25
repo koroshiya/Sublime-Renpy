@@ -10,6 +10,7 @@
       { "trigger": "AnimatedValue", "contents": "AnimatedValue(value=0.0, range=1.0, delay=1.0, old_value=None)" },
       { "trigger": "Character", "contents": "Character(name='$0')" },
       { "trigger": "DictValue", "contents": "DictValue(dict=$0, key=, range=, max_is_zero=False, style='bar', offset=0, step=None)" },
+      { "trigger": "DisableAllInputValues", "contents": "DisableAllInputValues()" },
       { "trigger": "DynamicCharacter", "contents": "DynamicCharacter(name='$0')" },
       { "trigger": "EndReplay", "contents": "EndReplay(confirm=True)" },
       { "trigger": "FieldValue", "contents": "FieldValue(object=$0, field=, range=, max_is_zero=False, style='bar', offset=0, step=None)" },
