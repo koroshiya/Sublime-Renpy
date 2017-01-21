@@ -1,0 +1,13 @@
+Sublime Renpy v1.2.9
+======================
+
+This release includes a single addition contributed by miwu.
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+
+New:
+-Added highlighting for local labels (ie. labels preceded by a dot and only valid within the file in which it exists)
