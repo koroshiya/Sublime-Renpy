@@ -7,5 +7,6 @@
 
 Add UI autocompletes, like Frame and Borders: https://www.renpy.org/doc/html/displayables.html#Frame
 Preference autocompletes: https://www.renpy.org/doc/html/screen_actions.html#Preference
-Add build.itch_project
 Autocomplete for no-scope blocks like "screen" and "transform"
+Add more autocompletes to "define" line statement
+Add code folding for menu statements and other non top level blocks
