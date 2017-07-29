@@ -179,7 +179,7 @@
         },
         "ingame":{
             "comment": "Renpy label block",
-            "match": "\\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|jump|stop|pause|play)\\b", 
+            "match": "\\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|jump|stop|pause|play|menu)\\b", 
             "name": "keyword.control.flow.renpy"
         },
         "transform":{
