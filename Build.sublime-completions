@@ -10,6 +10,7 @@
       { "trigger": "build.allow_integrated_gpu", "contents": "build.allow_integrated_gpu = ${1:True}" },
       { "trigger": "build.include_old_themes", "contents": "build.include_old_themes = ${1:True}" },
       { "trigger": "build.mac_identity", "contents": "build.mac_identity = '$0'" },
+      { "trigger": "build.itch_project", "contents": "build.itch_project = '${1:[itch_username]}/${2:[project_name]}'" },
 
       { "trigger": "build.archive", "contents": "build.archive(name='$0', file_list='all')" },
       { "trigger": "build.classify", "contents": "build.classify('${1:[pattern]}', '${2:[file_list]}')" },
