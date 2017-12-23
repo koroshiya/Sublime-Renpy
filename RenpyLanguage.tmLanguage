@@ -220,6 +220,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#define</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#default</string>
 				</dict>
 				<dict>
