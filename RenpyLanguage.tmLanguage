@@ -452,7 +452,7 @@
 			<key>comment</key>
 			<string>Renpy python init variables</string>
 			<key>match</key>
-			<string>(\h*)((build|style|theme)\.)(\w+)</string>
+			<string>(\h*)((style|theme)\.)(\w+)</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>

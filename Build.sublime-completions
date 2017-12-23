@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpy.python.init",
+   "scope": "source.renpy.python",
    "completions":
    [
       { "trigger": "build.directory_name", "contents": "build.directory_name = '$0'" },

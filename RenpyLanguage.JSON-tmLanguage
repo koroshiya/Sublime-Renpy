@@ -303,7 +303,7 @@
 
         "python_init": {
             "comment": "Renpy python init variables",
-            "match": "(\\h*)((build|style|theme)\\.)(\\w+)",
+            "match": "(\\h*)((style|theme)\\.)(\\w+)",
             "name":"keyword.control.flow.renpy",
             "captures": {
                 "3":{"name":"keyword.control.flow.renpy"},
