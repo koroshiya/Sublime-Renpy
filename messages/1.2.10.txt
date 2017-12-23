@@ -1,0 +1,14 @@
+Sublime Renpy v1.2.10
+======================
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+-Changes to several renpy syntax contexts with regard to init. eg. Build can now autocomplete outside of init blocks
+
+New:
+-Autocomplete for build.itch_project
+-Highlighting for menu block
+-Support for "default" keyword
