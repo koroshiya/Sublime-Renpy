@@ -370,7 +370,7 @@
 			<key>comment</key>
 			<string>Renpy python variables</string>
 			<key>match</key>
-			<string>(\h*)((renpy|config|achievement|persistent)\.)(\w+)</string>
+			<string>(\h*)((renpy|config|achievement|persistent|preferences)\.)(\w+)</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
 		</dict>

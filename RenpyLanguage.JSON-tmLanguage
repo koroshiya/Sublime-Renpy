@@ -293,7 +293,7 @@
 
         "python": {
             "comment": "Renpy python variables",
-            "match": "(\\h*)((renpy|config|achievement|persistent)\\.)(\\w+)",
+            "match": "(\\h*)((renpy|config|achievement|persistent|preferences)\\.)(\\w+)",
             "name":"keyword.control.flow.renpy",
             "captures": {
                 "3":{"name":"keyword.control.flow.renpy"},
