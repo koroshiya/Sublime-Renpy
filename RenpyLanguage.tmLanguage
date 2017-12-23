@@ -297,7 +297,7 @@
 		<key>define</key>
 		<dict>
 			<key>begin</key>
-			<string>^(\s*)(define)(\s+)</string>
+			<string>^(\s*)(define|default)(\s+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>

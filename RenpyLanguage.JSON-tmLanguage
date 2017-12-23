@@ -279,7 +279,7 @@
         },
 
         "define":{
-            "begin": "^(\\s*)(define)(\\s+)",
+            "begin": "^(\\s*)(define|default)(\\s+)",
             "beginCaptures": {
                 "2":{"name":"keyword.control.flow.renpy"}
             },
