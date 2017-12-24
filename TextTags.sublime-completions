@@ -1,0 +1,22 @@
+{
+   "scope": "source.renpy.ingame string.quoted.single.single-line.python.renpy, source.renpy.ingame string.quoted.double.single-line.python.renpy",
+   "completions":
+   [
+      { "trigger": "{a=}", "contents": "{a=$1}$2{/a}" },
+      { "trigger": "{alpha=}", "contents": "{alpha=${1:1.0}}$2{/alpha}" },
+      { "trigger": "{b}", "contents": "{b}$1{/b}" },
+      { "trigger": "{color=}", "contents": "{color=${1:#000}}$2{/color}" },
+      { "trigger": "{cps=}", "contents": "{cps=${1:45}}$2{/cps}" },
+      { "trigger": "{font=}", "contents": "{font=$1}$2{/font}" },
+      { "trigger": "{i}", "contents": "{i}$1{/i}" },
+      { "trigger": "{image}", "contents": "{image=$1}" },
+      { "trigger": "{k}", "contents": "{k=${1:1.0}}$2{/k}" },
+      { "trigger": "{rb}", "contents": "{rb}$1{/rb}" },
+      { "trigger": "{rt}", "contents": "{rt}$1{/rt}" },
+      { "trigger": "{s}", "contents": "{s}$1{/s}" },
+      { "trigger": "{size=}", "contents": "{size=$1}$2{/size}" },
+      { "trigger": "{space}", "contents": "{space=${1:30}}" },
+      { "trigger": "{u}", "contents": "{u}$1{/u}" },
+      { "trigger": "{vspace}", "contents": "{vspace=${1:30}}" }
+   ]
+}
