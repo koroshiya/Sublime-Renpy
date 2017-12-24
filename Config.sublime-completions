@@ -27,6 +27,7 @@
       { "trigger": "config.autosave_slots", "contents": "config.autosave_slots = ${1:10}" },
 
       { "trigger": "config.character_callback", "contents": "config.character_callback = ${1:None}" },
+      { "trigger": "config.character_id_prefixes", "contents": "config.character_id_prefixes = [$1]" },
       { "trigger": "config.choice_layer", "contents": "config.choice_layer = '${1:screens}'" },
       { "trigger": "config.clear_layers", "contents": "config.clear_layers = [$0]" },
       { "trigger": "config.context_clear_layers", "contents": "config.context_clear_layers = ['${1:screens}']" },
@@ -90,7 +91,11 @@
       { "trigger": "config.has_autosave", "contents": "config.has_autosave = ${1:True}" },
       { "trigger": "config.help", "contents": "config.help = ${1:'README.html'}" },
       { "trigger": "config.hide", "contents": "config.hide = ${1:renpy.hide}" },
+      { "trigger": "config.history_callbacks", "contents": "config.history_callbacks = [$1]"},
+      { "trigger": "config.history_length", "contents": "config.history_length = ${1:None}"},
       { "trigger": "config.hw_video", "contents": "config.hw_video = ${1:False}" },
+      { "trigger": "config.hyperlink_handlers", "contents": "config.hyperlink_handlers = {$1}"},
+      { "trigger": "config.hyperlink_protocol", "contents": "config.hyperlink_protocol = \"${1:call_in_new_context}\""},
 
       { "trigger": "config.image_cache_size", "contents": "config.image_cache_size = ${1:8}" },
       { "trigger": "config.imagemap_auto_function", "contents": "config.imagemap_auto_function = $0" },
@@ -109,6 +114,7 @@
       { "trigger": "config.layers", "contents": "config.layers = [ '${1:master}', '${2:transient}', '${3:screens}', '${4:overlay}' ]" },
       { "trigger": "config.lint_hooks", "contents": "config.lint_hooks = $0" },
       { "trigger": "config.load_before_transition", "contents": "config.load_before_transition = ${1:None}" },
+      { "trigger": "config.loadable_callback", "contents": "config.loadable_callback = ${1:None}" },
       { "trigger": "config.log", "contents": "config.log = ${1:None}" },
       { "trigger": "config.log_width", "contents": "config.log_width = ${1:78}" },
       { "trigger": "config.longpress_duration", "contents": "config.longpress_duration = ${1:0.5}" },
@@ -148,6 +154,7 @@
       { "trigger": "config.periodic_callback", "contents": "config.periodic_callback = ${1:None}" },
       { "trigger": "config.play_channel", "contents": "config.play_channel = '${1:audio}'" },
       { "trigger": "config.predict_statements", "contents": "config.predict_statements = ${1:10}" },
+      { "trigger": "config.preload_fonts", "contents": "config.preload_fonts = [$1]" },
       { "trigger": "config.profile", "contents": "config.profile = ${1:False}" },
       { "trigger": "config.python_callbacks", "contents": "config.python_callbacks = [$0]" },
 
@@ -168,6 +175,7 @@
       { "trigger": "config.save_physical_size", "contents": "config.save_physical_size = ${1:True}" },
       { "trigger": "config.savedir", "contents": "config.savedir = $0" },
       { "trigger": "config.say_allow_dismiss", "contents": "config.say_allow_dismiss = ${1:None}" },
+      { "trigger": "config.say_arguments_callback", "contents": "config.say_arguments_callback = ${1:None}" },
       { "trigger": "config.say_attribute_transition", "contents": "config.say_attribute_transition = ${1:None}" },
       { "trigger": "config.say_layer", "contents": "config.say_layer = '${1:screens}'" },
       { "trigger": "config.say_menu_text_filter", "contents": "config.say_menu_text_filter = ${1:None}" },
