@@ -14,6 +14,7 @@
       { "trigger": "config.all_character_callbacks", "contents": "config.all_character_callbacks = [$0]" },
       { "trigger": "config.allow_skipping", "contents": "config.allow_skipping = ${1:True}" },
       { "trigger": "config.archives", "contents": "config.archives = [$0]" },
+      { "trigger": "config.atl_one_frame", "contents": "config.atl_one_frame = ${1:True}" },
       { "trigger": "config.auto_channels", "contents": "config.auto_channels = { 'audio' : ${1:( 'sfx', '', '')}}" },
       { "trigger": "config.auto_choice_delay", "contents": "config.auto_choice_delay = ${1:None}" },
       { "trigger": "config.auto_load", "contents": "config.auto_load = ${1:None}" },
@@ -95,6 +96,7 @@
       { "trigger": "config.history_length", "contents": "config.history_length = ${1:None}"},
       { "trigger": "config.hw_video", "contents": "config.hw_video = ${1:False}" },
       { "trigger": "config.hyperlink_handlers", "contents": "config.hyperlink_handlers = {$1}"},
+      { "trigger": "config.hyperlink_inherit_size", "contents": "config.hyperlink_inherit_size = ${1:True}" },
       { "trigger": "config.hyperlink_protocol", "contents": "config.hyperlink_protocol = \"${1:call_in_new_context}\""},
 
       { "trigger": "config.image_cache_size", "contents": "config.image_cache_size = ${1:8}" },
@@ -103,6 +105,7 @@
       { "trigger": "config.implicit_with_none", "contents": "config.implicit_with_none = ${1:True}" },
       { "trigger": "config.interact_callbacks", "contents": "config.interact_callbacks = $0" },
 
+      { "trigger": "config.keep_show_layer_state", "contents": "config.keep_show_layer_state = ${1:True}" },
       { "trigger": "config.keep_running_transform", "contents": "config.keep_running_transform = ${1:True}" },
       { "trigger": "config.key_repeat", "contents": "config.key_repeat = (${1:.3}, ${2:.03})" },
       { "trigger": "config.keymap", "contents": "config.keymap = dict($0)" },
@@ -139,11 +142,13 @@
       { "trigger": "config.narrator_menu", "contents": "config.narrator_menu = ${1:False}" },
       { "trigger": "config.nearest_neighbor", "contents": "config.nearest_neighbor = ${1:False}" },
       { "trigger": "config.new_substitutions", "contents": "config.new_substitutions = ${1:True}" },
+      { "trigger": "config.new_translate_order", "contents": "config.new_translate_order = ${1:True}" },
       { "trigger": "config.nvl_adv_transition", "contents": "config.nvl_adv_transition = ${1:None}" },
       { "trigger": "config.nvl_layer", "contents": "config.nvl_layer = '$0'"},
       { "trigger": "config.nvl_page_ctc", "contents": "config.nvl_page_ctc = $0"},
       { "trigger": "config.nvl_page_ctc_position", "contents": "config.nvl_page_ctc_position = '$0'"},
       { "trigger": "config.nvl_paged_rollback", "contents": "config.nvl_paged_rollback = $0"},
+      { "trigger": "config.nw_voice", "contents": "config.nw_voice = ${1:True}" },
 
       { "trigger": "config.old_substitutions", "contents": "config.old_substitutions = ${1:False}" },
       { "trigger": "config.overlay_during_with", "contents": "config.overlay_during_with = ${1:True}" },
