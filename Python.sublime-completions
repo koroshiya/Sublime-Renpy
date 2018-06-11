@@ -8,7 +8,7 @@
 
       { "trigger": "layout.yesno_screen", "contents": "layout.yesno_screen(message='$0', yes=None, no=None)" },
 
-      { "trigger": "persistent", "contents": "persistent.${1:[variable]} = ${2:[value]}" },
+      { "trigger": "persistent", "contents": "persistent.${0:[variable]} = ${1:[value]}" },
 
       { "trigger": "renpy.add_layer", "contents": "renpy.add_layer(layer='$0', above=None, below=None, menu_clear=True)" },
 
@@ -26,9 +26,9 @@
       { "trigger": "renpy.count_dialogue_blocks", "contents": "renpy.count_dialogue_blocks()" },
       { "trigger": "renpy.count_seen_dialogue_blocks", "contents": "renpy.count_seen_dialogue_blocks()" },
 
-      { "trigger": "renpy.define_screen", "contents": "renpy.define_screen('${1:[screenName]}', '${2:[displayFunction]}', modal='False', zorder='0', tag=None, variant=None)" },
+      { "trigger": "renpy.define_screen", "contents": "renpy.define_screen('${0:[screenName]}', '${1:[displayFunction]}', modal='False', zorder='0', tag=None, variant=None)" },
       { "trigger": "renpy.diff_memory", "contents": "renpy.diff_memory(update=True)" },
-      { "trigger": "renpy.display_menu", "contents": "renpy.display_menu(items=('${1:[option]}','${2:[returnValue]}'), interact=True, screen='choice')" },
+      { "trigger": "renpy.display_menu", "contents": "renpy.display_menu(items=('${0:[option]}','${1:[returnValue]}'), interact=True, screen='choice')" },
       { "trigger": "renpy.dynamic", "contents": "renpy.dynamic()" },
 
       { "trigger": "renpy.end_replay", "contents": "renpy.end_replay()" },
@@ -40,20 +40,24 @@
       { "trigger": "renpy.full_restart", "contents": "renpy.full_restart(transition=False, label='_invoke_main_menu', target='_main_menu')" },
 
       { "trigger": "renpy.get_at_list", "contents": "renpy.get_at_list(name='$0', layer='master')" },
+      { "trigger": "renpy.get_attributes", "contents": "renpy.get_attributes(tag='$0', layer=None)" },
+      { "trigger": "renpy.get_available_image_tags", "contents": "renpy.get_available_image_tags()" },
       { "trigger": "renpy.get_autoreload", "contents": "renpy.get_autoreload()" },
-      { "trigger": "renpy.get_image_bounds", "contents": "renpy.get_image_bounds(tag=$0, width=None, height=None, layer='master')" },
+      { "trigger": "renpy.get_hidden_tags", "contents": "renpy.get_hidden_tags(layer='master')" },
+      { "trigger": "renpy.get_image_bounds", "contents": "renpy.get_image_bounds(tag='$0', width=None, height=None, layer='master')" },
       { "trigger": "renpy.get_image_load_log", "contents": "renpy.get_image_load_log(age=None)" },
       { "trigger": "renpy.get_mouse_pos", "contents": "renpy.get_mouse_pos()" },
+      { "trigger": "renpy.get_ordered_image_attributes", "contents": "renpy.get_ordered_image_attributes(tag='$0', attributes=(), sort=None)" },
       { "trigger": "renpy.get_physical_size", "contents": "renpy.get_physical_size()" },
       { "trigger": "renpy.get_placement", "contents": "renpy.get_placement(d=$0)" },
-      { "trigger": "renpy.get_refresh_rate", "contents": "renpy.get_refresh_rate(precision=${1:5})" },
+      { "trigger": "renpy.get_refresh_rate", "contents": "renpy.get_refresh_rate(precision=${0:5})" },
       { "trigger": "renpy.get_renderer_info", "contents": "renpy.get_renderer_info()" },
       { "trigger": "renpy.get_say_attributes", "contents": "renpy.get_say_attributes()" },
       { "trigger": "renpy.get_screen", "contents": "renpy.get_screen(name='$0', layer='screens')" },
       { "trigger": "renpy.get_showing_tags", "contents": "renpy.get_showing_tags(layer='master', sort=False)" },
       { "trigger": "renpy.get_side_image", "contents": "renpy.get_side_image(prefix_tag='$0', image_tag=None, not_showing=True, layer='master')" },
       { "trigger": "renpy.get_transition", "contents": "renpy.get_transition(layer=None)" },
-      { "trigger": "renpy.get_widget", "contents": "renpy.get_widget('${1:[screen]}', '${2:[id]}', layer='screens')" },
+      { "trigger": "renpy.get_widget", "contents": "renpy.get_widget('${0:[screen]}', '${1:[id]}', layer='screens')" },
       { "trigger": "renpy.get_widget_properties", "contents": "renpy.get_widget_properties(id='$0', screen=None, layer='screens')" },
 
       { "trigger": "renpy.has_image", "contents": "renpy.has_image(name='$0', exact=False)" },
@@ -99,7 +103,7 @@
       { "trigger": "renpy.quit_event", "contents": "renpy.quit_event()" },
 
       { "trigger": "renpy.random.random", "contents": "renpy.random.random()" },
-      { "trigger": "renpy.random.randint", "contents": "renpy.random.randint(${1:[min]}, ${2:[max]})" },
+      { "trigger": "renpy.random.randint", "contents": "renpy.random.randint(${0:[min]}, ${1:[max]})" },
       { "trigger": "renpy.random.choice", "contents": "renpy.random.choice(seq=[$0])" },
       { "trigger": "renpy.reload_script", "contents": "renpy.reload_script()" },
       { "trigger": "renpy.reset_physical_size", "contents": "renpy.reset_physical_size()" },
@@ -107,15 +111,15 @@
       { "trigger": "renpy.return_statement", "contents": "renpy.return_statement()" },
       { "trigger": "renpy.run", "contents": "renpy.run(action=$0)" },
       
-      { "trigger": "renpy.say", "contents": "renpy.say('${1:[whoIsTalking]}', '${2:[whatIsSaid]}', interact=True)" },
+      { "trigger": "renpy.say", "contents": "renpy.say('${0:[whoIsTalking]}', '${1:[whatIsSaid]}', interact=True)" },
       { "trigger": "renpy.scene", "contents": "renpy.scene(layer='master')" },
       { "trigger": "renpy.screenshot", "contents": "renpy.screenshot(filename='$0')" },
       { "trigger": "renpy.scry", "contents": "renpy.scry()" },
       { "trigger": "renpy.seen_audio", "contents": "renpy.seen_audio(filename='$0')" },
       { "trigger": "renpy.seen_image", "contents": "renpy.seen_image(name='$0')" },
       { "trigger": "renpy.set_autoreload", "contents": "renpy.set_autoreload(autoreload=$0)" },
-      { "trigger": "renpy.set_mouse_pos", "contents": "renpy.set_mouse_pos(${1:[x]}, ${2:[y]}, duration=0)" },
-      { "trigger": "renpy.set_physical_size", "contents": "renpy.set_physical_size(size=(${1:[x]}, ${2:[y]}))" },
+      { "trigger": "renpy.set_mouse_pos", "contents": "renpy.set_mouse_pos(${0:[x]}, ${1:[y]}, duration=0)" },
+      { "trigger": "renpy.set_physical_size", "contents": "renpy.set_physical_size(size=(${0:[x]}, ${1:[y]}))" },
       { "trigger": "renpy.show", "contents": "renpy.show(name='$0', at_list=[], layer='master', what=None, zorder=0, tag=None, behind=[])" },
       { "trigger": "renpy.show_layer_at", "contents": "renpy.show_layer_at(at_list=[$0], layer='master')" },
       { "trigger": "renpy.show_screen", "contents": "renpy.show_screen(_screen_name='$0')" },
