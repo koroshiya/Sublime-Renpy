@@ -7,5 +7,6 @@
       { "trigger": "init", "contents": "init:\n\n\t$0" },
       { "trigger": "define", "contents": "define ${1:[variable]} = ${2:[value]}" },
       { "trigger": "image", "contents": "image ${1:[imageName]} = '${2:[fileName]}'" },
+      { "trigger": "layeredimage", "contents": "layeredimage ${1:[imageName]}:\n\t$2" }
    ]
 }

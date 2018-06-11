@@ -1,5 +1,5 @@
 {
-   "scope": "source.renpy.atl, source.renpy.transform",
+   "scope": "source.renpy.atl, source.renpy.transform, source.renpy.layeredimage",
    "completions":
    [
 

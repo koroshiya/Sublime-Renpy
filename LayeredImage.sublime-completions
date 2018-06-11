@@ -1,0 +1,8 @@
+{
+   "scope": "source.renpy.layeredimage",
+   "completions":
+   [
+      { "trigger": "group", "contents": "group ${1:[name]}" },
+      { "trigger": "attribute", "contents": "attribute ${1:[name]}" }
+   ]
+}

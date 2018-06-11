@@ -43,6 +43,7 @@
       { "trigger": "If", "contents": "If(expression=$0, true=None, false=None)" },
       { "trigger": "InvertSelected", "contents": "InvertSelected(action=$0)" },
       { "trigger": "Jump", "contents": "Jump(label=$0)" },
+      { "trigger": "LayeredImageProxy", "contents": "LayeredImageProxy(name=${1:[name]}, transform=${2:None}))" },
       { "trigger": "LiveComposite", "contents": "LiveComposite(size=(${1:[x]}, ${2:[y]}))" },
       { "trigger": "MainMenu", "contents": "MainMenu(confirm=True)" },
       { "trigger": "MixerValue", "contents": "MixerValue(mixer=$0)" },

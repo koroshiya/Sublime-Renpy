@@ -151,6 +151,47 @@
 			<string>#style</string>
 		</dict>
 		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>^(\s*)(layeredimage)(\s+\w+):</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.flow.renpy</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>variable.renpy</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>^(?!(\1\s+|\s*#.*$))</string>
+					<key>name</key>
+					<string>source.renpy.layeredimage</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#layeredimage</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#atl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#source_python</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>#transform</string>
 		</dict>
@@ -229,6 +270,10 @@
 				<dict>
 					<key>include</key>
 					<string>#style</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#layeredimage</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -351,6 +396,26 @@
 			<string>\b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|jump|stop|pause|play|menu)\b</string>
 			<key>name</key>
 			<string>keyword.control.flow.renpy</string>
+		</dict>
+		<key>layeredimage</key>
+		<dict>
+			<key>comment</key>
+			<string>LayeredImage properties</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(group|always|attribute)\b</string>
+					<key>name</key>
+					<string>keyword.control.flow.renpy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(auto|if_all|if_any|if_not|default)\b</string>
+					<key>name</key>
+					<string>variable.parameter.renpy</string>
+				</dict>
+			</array>
 		</dict>
 		<key>python</key>
 		<dict>

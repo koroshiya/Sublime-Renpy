@@ -59,6 +59,26 @@
 
         {"include":"#style"},
 
+        {
+
+            "patterns": [
+                {
+                    "begin": "^(\\s*)(layeredimage)(\\s+\\w+):",
+                    "beginCaptures":{
+                        "2":{"name":"keyword.control.flow.renpy"},
+                        "3":{"name":"variable.renpy"}
+                    },
+                    "patterns": [
+                        {"include": "#layeredimage"},
+                        {"include": "#atl"},
+                        {"include": "#source_python"}
+                    ],
+                    "end": "^(?!(\\1\\s+|\\s*#.*$))",
+                    "name": "source.renpy.layeredimage"
+                }
+            ]
+        },
+
         {"include":"#transform"},
 
         {"include": "#python_block"},
@@ -89,6 +109,7 @@
                 {"include":"#define"},
                 {"include":"#default"},
                 {"include":"#style"},
+                {"include":"#layeredimage"},
                 {"include": "#source_python"}
             ],
             "end": "^(?!(\\1\\s+|\\s*#.*$))",
@@ -233,6 +254,20 @@
                     ],
                     "end": "^(?!(\\1\\s+|\\s*#.*$))",
                     "name": "source.renpy.atl"
+                }
+            ]
+        },
+
+        "layeredimage": {
+            "comment": "LayeredImage properties", 
+            "patterns": [
+                {
+                    "match": "\\b(group|always|attribute)\\b",
+                    "name": "keyword.control.flow.renpy"
+                },
+                {
+                    "match": "\\b(auto|if_all|if_any|if_not|default)\\b",
+                    "name": "variable.parameter.renpy"
                 }
             ]
         },
