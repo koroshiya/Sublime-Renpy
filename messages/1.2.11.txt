@@ -1,0 +1,16 @@
+Sublime Renpy v1.2.11
+======================
+
+Bugfixes:
+-Incorrect autocomplete for renpy.get_showing_tags
+
+Improvements:
+-Tabbing now works better for several autocompletes
+
+Changes:
+
+New:
+-Added missing image manipulator autocompletes
+-Added missing config autocompletes
+-Basic support for highlighting/autocompleting layeredimage
+-Text tag autocompletes
