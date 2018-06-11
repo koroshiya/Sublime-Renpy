@@ -50,7 +50,7 @@
       { "trigger": "renpy.get_renderer_info", "contents": "renpy.get_renderer_info()" },
       { "trigger": "renpy.get_say_attributes", "contents": "renpy.get_say_attributes()" },
       { "trigger": "renpy.get_screen", "contents": "renpy.get_screen(name='$0', layer='screens')" },
-      { "trigger": "renpy.get_showing_tags", "contents": "renpy.get_placement(layer='master')" },
+      { "trigger": "renpy.get_showing_tags", "contents": "renpy.get_showing_tags(layer='master', sort=False)" },
       { "trigger": "renpy.get_side_image", "contents": "renpy.get_side_image(prefix_tag='$0', image_tag=None, not_showing=True, layer='master')" },
       { "trigger": "renpy.get_transition", "contents": "renpy.get_transition(layer=None)" },
       { "trigger": "renpy.get_widget", "contents": "renpy.get_widget('${1:[screen]}', '${2:[id]}', layer='screens')" },
