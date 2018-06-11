@@ -63,7 +63,7 @@
 
             "patterns": [
                 {
-                    "begin": "^(\\s*)(layeredimage)(\\s+\\w+):",
+                    "begin": "^(\\s*)(layeredimage)(\\s+\\w+)+:",
                     "beginCaptures":{
                         "2":{"name":"keyword.control.flow.renpy"},
                         "3":{"name":"variable.renpy"}

@@ -155,7 +155,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>^(\s*)(layeredimage)(\s+\w+):</string>
+					<string>^(\s*)(layeredimage)(\s+\w+)+:</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>2</key>
