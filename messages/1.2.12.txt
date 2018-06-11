@@ -1,0 +1,11 @@
+Sublime Renpy v1.2.12
+======================
+
+Bugfixes:
+
+Improvements:
+-Layeredimage highlighting now supports multi-word tags
+
+Changes:
+
+New:
