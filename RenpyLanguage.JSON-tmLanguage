@@ -19,6 +19,7 @@
                 "4":{"name":"variable.renpy"}
             },
             "patterns": [
+                {"include": "#string_quoted_triple"},
                 {"include": "#string_quoted_single"},
                 {"include": "#string_quoted_double"},
                 {"include": "#string_quoted_backtick"},
@@ -143,6 +144,20 @@
                     ]
                 }
             ]
+        },
+        "string_quoted_triple":{
+            "begin": "(?<!\\\\)\"\"\"",
+            "patterns": [
+                {
+                    "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+                    "name": "constant.character.escape.backslash.regex.python"
+                },{
+                    "match": "\\{(.*?)\\}",
+                    "name": "constant.character.escape.backslash.regex.python"
+                }
+            ],
+            "end": "(?<!\\\\)\"\"\"",
+            "name": "string.quoted.triple.triple-line.python.renpy"
         },
         "string_quoted_single":{
             "begin": "(?<!\\\\)'",

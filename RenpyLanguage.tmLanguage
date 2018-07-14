@@ -49,6 +49,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#string_quoted_triple</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#string_quoted_single</string>
 				</dict>
 				<dict>
@@ -694,6 +698,30 @@
 			<string>(?&lt;!\\)'</string>
 			<key>name</key>
 			<string>string.quoted.single.single-line.python.renpy</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\{(.*?)\}</string>
+					<key>name</key>
+					<string>constant.character.escape.backslash.regex.python</string>
+				</dict>
+			</array>
+		</dict>
+		<key>string_quoted_triple</key>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;!\\)"""</string>
+			<key>end</key>
+			<string>(?&lt;!\\)"""</string>
+			<key>name</key>
+			<string>string.quoted.triple.triple-line.python.renpy</string>
 			<key>patterns</key>
 			<array>
 				<dict>
