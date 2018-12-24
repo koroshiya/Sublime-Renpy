@@ -98,6 +98,6 @@
       { "trigger": "VoiceReplay", "contents": "VoiceReplay()" },
       { "trigger": "With", "contents": "With(transition=$0)" },
       { "trigger": "XScrollValue", "contents": "XScrollValue(viewport=$0)" },
-      { "trigger": "YScrollValue", "contents": "YScrollValue(viewport=$0)" },
+      { "trigger": "YScrollValue", "contents": "YScrollValue(viewport=$0)" }
    ]
 }

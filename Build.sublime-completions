@@ -17,7 +17,7 @@
       { "trigger": "build.clear", "contents": "build.clear()" },
       { "trigger": "build.documentation", "contents": "build.documentation(pattern='$0')" },
       { "trigger": "build.executable", "contents": "build.executable(pattern='$0')" },
-      { "trigger": "build.package", "contents": "build.package('${1:[packageName]}', '${2:[packageFormat]}', [${3:[file_lists]}, ], description=None, update=True, dlc=False, hidden=False)" },
+      { "trigger": "build.package", "contents": "build.package('${1:[packageName]}', '${2:[packageFormat]}', [${3:[file_lists]}, ], description=None, update=True, dlc=False, hidden=False)" }
 
     ]
 }

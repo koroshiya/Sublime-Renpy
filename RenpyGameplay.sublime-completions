@@ -10,6 +10,6 @@
       { "trigger": "scene", "contents": "scene $0" },
       { "trigger": "show", "contents": "show $0" },
       { "trigger": "menu", "contents": "menu:\n\t\"${1:[Question]}\"\n\n\t\"${2:[Choice 1]}\":\n\n\t\tpass\n\n\t\"${3:[Choice 2]}\":\n\n\t\tpass" },
-      { "trigger": "renpy.input", "contents": "\\$ renpy.input(prompt='$0', default='', allow=None, exclude='{}', length=None, with_none=None, pixel_width=None)" },
+      { "trigger": "renpy.input", "contents": "\\$ renpy.input(prompt='$0', default='', allow=None, exclude='{}', length=None, with_none=None, pixel_width=None)" }
    ]
 }

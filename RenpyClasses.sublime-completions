@@ -14,6 +14,6 @@
       { "trigger": "SpriteManager", "contents": "SpriteManager(update=None, event=None, predict=None, ignore_time=False)" },
       { "trigger": "Style", "contents": "Style(parent='$0')" },
       { "trigger": "Tooltip", "contents": "Tooltip(default='$0')" },
-      { "trigger": "Transform", "contents": "Transform(child=None, function=None)" },
+      { "trigger": "Transform", "contents": "Transform(child=None, function=None)" }
    ]
 }

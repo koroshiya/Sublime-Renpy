@@ -9,6 +9,6 @@
       { "trigger": "achievement.has", "contents": "achievement.has('${1:[achievementName]}')" },
       { "trigger": "achievement.progress", "contents": "achievement.progress('${1:[achievementName]}', ${2:[unitsTowardsCompletion]})" },
       { "trigger": "achievement.register", "contents": "achievement.register('${1:[achievementName]}')" },
-      { "trigger": "achievement.sync", "contents": "achievement.sync()" },
+      { "trigger": "achievement.sync", "contents": "achievement.sync()" }
    ]
 }
