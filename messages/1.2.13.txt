@@ -1,0 +1,13 @@
+Sublime Renpy v1.2.13
+======================
+
+Bugfixes:
+-Made package compatible with ST3.2+
+
+Improvements:
+
+Changes:
+
+New:
+-Support for Renpy's new "narration mode"
+-Started work on rewriting package to use new sublime-syntax format
