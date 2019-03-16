@@ -23,7 +23,7 @@ file_extensions:
   - Snakefile
   - wscript
 first_line_match: ^#!\s*/.*\bpython(\d(\.\d)?)?\b
-scope: source.python
+scope: source.python.compat
 
 variables:
   # We support unicode here because Python 3 is the future
@@ -57,7 +57,6 @@ variables:
       | [urfb]*'(?:\\.|[^'])*' # ^
       | [\d.ej]+               # numerics
       | [+*/%@-] | // | and | or # operators
-      | {{path}}               # a path
     )*
 
 
@@ -130,7 +129,7 @@ contexts:
       scope: keyword.control.import.from.python
       push:
         - meta_scope: meta.statement.import.python
-        - meta_content_scope: meta.import-source.python
+        - meta_content_scope: meta.import-source.python.compat
         - include: line-continuation-or-pop
         - match: \b(import)\b
           scope: keyword.control.import.python
@@ -1421,7 +1420,7 @@ contexts:
             - include: f-string-content
         - match: ''
           push:
-            - meta_content_scope: source.python.embedded
+            - meta_content_scope: source.python.compat.embedded
             - match: (?=![^=]|:|\})
               pop: true
             - match: \\
@@ -1432,7 +1431,7 @@ contexts:
   f-string-replacement-reset:
     # Same as f-string-replacement, but with clear_scopes: true
     - clear_scopes: true
-    - meta_scope: source.python meta.string.interpolated.python
+    - meta_scope: source.python.compat meta.string.interpolated.python
     - match: \}
       scope: meta.interpolation.python punctuation.section.interpolation.end.python
       pop: true
@@ -1452,7 +1451,7 @@ contexts:
             - include: f-string-content
         - match: ''
           push:
-            - meta_content_scope: source.python.embedded
+            - meta_content_scope: source.python.compat.embedded
             - match: (?=![^=]|:|\})
               pop: true
             - match: \\

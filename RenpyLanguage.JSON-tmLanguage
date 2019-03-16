@@ -128,7 +128,7 @@
         "source_python":{
             "comment": "Context for python statements + Renpy autocompletes",
             "name": "source.renpy.python",
-            "include": "source.python"
+            "include": "source.python.compat"
         },
         "default":{
             "comment": "Default context",
