@@ -1,0 +1,344 @@
+%YAML 1.2
+---
+name: RenpyLanguage (ST 3.2+)
+file_extensions: [rpy, rpym]
+scope: source.renpy
+
+contexts:
+  main:
+    - include: label
+    - include: screen
+    - include: style
+    - include: layeredimage
+    - include: transform
+    - include: python_block
+    - include: init
+    - include: define
+    - include: default
+    - include: source_python_single
+
+  default:
+    #Default context
+    - match: ^(\s+)\b(transform|image)\b
+      scope: keyword.control.flow.renpy
+      push:
+        - match: \n
+          pop: true
+        - match: ^(((\s)*(\w)+)(\s)+)+(\=)
+          captures:
+            4: variable.renpy
+            6: keyword.control.flow.renpy
+          push:
+            - match: \n
+              pop: true
+            - include: source_python_single
+
+  source_python_single:
+    #Context for python statements + Renpy autocompletes
+    - match: (?=\S)
+      scope: source.renpy.python
+      embed: scope:source.python
+      embed_scope: source.python.embedded
+      escape: (?=\n)
+
+  source_python_multi:
+    #Context for python statements + Renpy autocompletes
+    - match: ^([ ]+)(?! )
+      scope: source.renpy.python
+      embed: scope:source.python
+      embed_scope: source.python.embedded
+      escape: ^(?!\1|\s*$)
+
+  screen_common_properties:
+    #common properties - http://www.renpy.org/doc/html/screens.html#common-properties
+    - match: \b(at|default|id|style|focus)\b
+      scope: keyword.control.flow.renpy
+
+  screen_keywords:
+    #renpy keywords
+    - match: \b(add|audio|bar|behind|block|button|choice|circles|clear|clockwise|config|contains|counterclockwise|define|dissolve|ease|easein|easeinright|easeinleft|easeintop|easeinbottom|easeout|easeoutright|easeoutleft|easeouttop|easeoutbottom|event|expression|fade|fadein|fadeout|fixed|frame|function|grid|has|hbox|hotbar|hotspot|hpunch|image|imagebutton|imagemap|init|irisin|jump|key|key_event|knot|label|menu|modal|move|moveinright|moveinleft|moveintop|moveinbottom|moveoutright|moveoutleft|moveouttop|moveoutbottom|movie|music|null|nvl|on|parallel|pixellate|position|python|queue|renpy|repeat|screen|side|slideleft|slideright|slideup|slidedown|slideawayleft|slideawayright|slideawayup|slideawaydown|sound|squares|store|style_group|style_prefix|style_suffix|tag|text|textbutton|time|timer|transform|translate|ui|use|value|variant|vbar|vbox|viewport|voice|vpgrid|vpunch|window|wipeleft|wiperight|wipeup|wipedown|zoomin|zoomout|zoominout|zorder)\b
+      scope: keyword.control.flow.renpy
+
+  renpy_functions:
+    #renpy methods
+    - match: \b(Action|AnimatedValue|At|Character|DictValue|DisableAllInputValues|Dissolve|DynamicCharacter|EndReplay|Fade|FileAction|FileDelete|FileLoad|FilePage|FilePageNext|FilePagePrevious|FileSave|FileTakeScreenshot|Function|FileCurrentPage|FileCurrentScreenshot|FileJson|FileLoadable|FileNewest|FilePageName|FileSaveName|FileScreenshot|FileSlotName|FileTime|FileUsedSlots|FieldValue|Help|Hide|HideInterface|If|InvertSelected|Jump|LiveComposite|LiveCrop|MainMenu|MixerValue|MouseMove|Movie|Notify|NullAction|OpenURL|Pause|Play|Position|Preference|Queue|QuickLoad|QuickSave|Quit|Replay|Return|Rollback|RollForward|Screenshot|SelectedIf|SensitiveIf|SetDict|SetField|SetMixer|SetScreenVariable|SetVariable|ShowMenu|ShowTransient|SideImage|Skip|Start|StaticValue|Stop|Text|ToggleDict|ToggleField|ToggleScreenVariable|Tooltip|ToggleVariable|Transform|VariableValue|With|XScrollValue|YScrollValue|Start|Hide|Show)\b
+      scope: support.function.renpy
+
+  stringconstants:
+    - match: '\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+      scope: constant.character.escape.backslash.regex.python
+    - match: '\{(.*?)\}'
+      scope: constant.character.escape.backslash.regex.python
+
+  string_quoted_triple:
+    - meta_scope: string.quoted.triple.triple-line.python.renpy
+    - include: stringconstants
+    - match: (?<!\\)"""
+      pop: true
+
+  string_quoted_backtick:
+    - meta_scope: string.quoted.single.single-line.python.renpy
+    - include: stringconstants
+    - match: (?<!\\)`
+      pop: true
+
+  string_quoted_double:
+    - meta_scope: string.quoted.double.single-line.python.renpy
+    - include: stringconstants
+    - match: (?<!\\)"
+      pop: true
+
+  string_quoted_single:
+    - meta_scope: string.quoted.single.single-line.python.renpy
+    - include: stringconstants
+    - match: (?<!\\)'
+      pop: true
+
+  layeredimage:
+    #LayeredImage properties
+    - match: '^(\s*)(layeredimage)(\s+\w+)+:'
+      scope: source.renpy.layeredimage
+      captures:
+        2: keyword.control.flow.renpy
+        3: variable.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - match: \b(group|always|attribute)\b
+          scope: keyword.control.flow.renpy
+        - match: \b(auto|if_all|if_any|if_not|default)\b
+          scope: variable.parameter.renpy
+        - include: atl
+        - include: source_python_multi
+
+  transform:
+    #ATL blocks
+    - match: ^(\h*)(transform|image|scene|show)(\s+\w+)+(\s*(\(.*\)))?\s*:\s*$
+      scope: source.renpy.transform
+      captures:
+        2: keyword.control.flow.renpy
+        5: variable.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: atl
+        - include: source_python_single
+
+  style:
+    - match: '^(\s*)(style)(\s+\w+)((\s+)(is)(\s+)(\w+))?(\s*):'
+      scope: source.renpy.atl
+      captures:
+        2: keyword.control.flow.renpy
+        3: variable.renpy
+        6: keyword.control.flow.renpy
+        8: variable.renpy
+      push:
+        - include: style_block
+    - match: ^(\s*)(style)(\s+\w+)(\s+)(is)(\s+)(\w+)
+      scope: source.renpy.atl
+      captures:
+        2: keyword.control.flow.renpy
+        3: variable.renpy
+        5: keyword.control.flow.renpy
+        7: variable.renpy
+      push:
+        - include: style_block
+
+  style_block:
+    - match: ^(?!(\1\s+|\s*#.*$))
+      pop: true
+    - include: atl
+    - include: source_python_multi
+
+  atl:
+    #ATL transform and UI element properties
+    - match: \b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|adjust_spacing|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse|selected|sensitive|keysym|alternate_keysym|arrowkeys|mousewheel|padding|properties|scrollbars|draggable|side_xfill|side_yfill|xadjustment|yadjustment|scrollbar_thumb|transclude|rows|cols|xinitial|yinitial|base_bar|alpha|linear)\b
+      scope: variable.parameter.renpy
+
+  strings:
+    - match: (?<!\\)"""
+      scope: string.quoted.triple.triple-line.python.renpy
+      push: string_quoted_triple
+    - match: (?<!\\)`
+      scope: string.quoted.single.single-line.python.renpy
+      push: string_quoted_backtick
+    - match: (?<!\\)"
+      scope: string.quoted.double.single-line.python.renpy
+      push: string_quoted_double
+    - match: (?<!\\)'
+      scope: string.quoted.single.single-line.python.renpy
+      push: string_quoted_single
+
+  label:
+    - match: '^(\h*)(label)(\s+)(\.?\w+)(\s*\(.*\)\s*)?:'
+      scope: source.renpy.ingame
+      captures:
+        2: keyword.control.flow.renpy
+        4: variable.renpy
+      push:
+        - match: ^([ ]+)(?! )
+          set:
+            - meta_scope: source.renpy.ingame
+            - match: ^(?!\1|\s*$)
+              pop: true
+            - include: strings
+            - include: transform
+            - include: ingame
+            - include: python_block
+            - include: python_line
+            - include: say_statement
+            - include: source_python_single
+
+  say_statement:
+    - match: ^\s*(\w+\s+)
+      push:
+        - match: \n
+          pop: true
+        - include: strings
+
+  screen:
+    - match: '^(\h*)(screen)(\s+)(\w+)(\s*)(\(.*\))?(\s*):'
+      scope: source.renpy.screen
+      captures:
+        2: keyword.control.flow.renpy
+        4: variable.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - match: \b(action|style|unhovered|hovered)\b
+          #ATL arguments
+          scope: variable.parameter.renpy
+        - include: transform
+        - include: screen
+        - include: python_block
+        - include: python_line
+        - include: source_python_multi
+        - include: imagemap
+        - include: atl
+        - include: screen_common_properties
+        - include: screen_keywords
+        - include: renpy_functions
+
+  imagemap:
+    - match: '^(\s*)(imagemap)(\s*):'
+      captures:
+        2: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - match: \b(auto|ground|insensitive|idle|hover|selected_idle|selected_hover|alpha|cache)\b
+          scope: variable.parameter.renpy
+        - include: screen
+        - include: source_python_multi
+
+  define:
+    - match: ^(\s*)(define|default)(\s+)
+      scope: source.renpy.python
+      captures:
+        2: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\n))
+          pop: true
+        - include: python
+        - include: source_python_single
+
+  init:
+    - match: ^(\h*)init(\s+)((\+|\-)\d+\s+)?python((\s+)(\w*))?:(\s*)$
+      scope: source.renpy.python.init
+      captures:
+        0: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: python
+        - include: python_init
+        - include: source_python_multi
+    - match: ^(\h*)(init)(\s+(\+|\-)\d+)?(\s+\w*)?\s*:\s*$
+      scope: source.renpy
+      captures:
+        0: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: python_block_init
+        - include: python_line_init
+        - include: default
+        - include: transform
+        - include: define
+        - include: style
+        - include: layeredimage
+        - include: source_python_single
+
+  ingame:
+    #Renpy label block
+    - match: \b(as|at|behind|onlayer|zorder|show|expression|scene|hide|with|window|call|jump|stop|pause|play|menu)\b
+      scope: keyword.control.flow.renpy
+
+  renpy_python:
+    - include: python
+    - match: ""
+      embed: scope:source.python
+      embed_scope: source.python
+      escape: \n
+
+  python:
+    #Renpy python variables
+    - match: (\h*)((renpy|config|achievement|persistent|preferences|gui|build)\.)(\w+)
+      scope: keyword.control.flow.renpy
+      captures:
+        3: keyword.control.flow.renpy
+        4: variable.renpy
+
+  python_block:
+    - match: '^(\s*)python(\s+\w+)?(\s*):'
+      scope: source.renpy.python
+      captures:
+        0: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: python
+        - include: source_python_multi
+
+  python_block_init:
+    - match: '^(\s*)python(\s+\w+)?(\s*):'
+      scope: source.renpy.python.init
+      captures:
+        0: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: python
+        - include: python_init
+        - include: source_python_multi
+
+  python_init:
+    #Renpy python init variables
+    - match: (\h*)((style|theme)\.)(\w+)
+      scope: keyword.control.flow.renpy
+      captures:
+        3: keyword.control.flow.renpy
+        4: variable.renpy
+
+  python_line:
+    - match: ^(\s*)(\$)
+      scope: source.renpy.python
+      captures:
+        2: keyword.control.flow.renpy
+      push:
+        - match: \n
+          pop: true
+        - include: python
+        - include: source_python_single
+
+  python_line_init:
+    - match: ^(\s*)(\$)
+      scope: source.renpy.python.init
+      captures:
+        2: keyword.control.flow.renpy
+      push:
+        - match: \n
+          pop: true
+        - include: python
+        - include: python_init
+        - include: source_python_single
