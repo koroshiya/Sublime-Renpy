@@ -638,7 +638,7 @@
 			<key>comment</key>
 			<string>Context for python statements + Renpy autocompletes</string>
 			<key>include</key>
-			<string>source.python.compat</string>
+			<string>source.python</string>
 			<key>name</key>
 			<string>source.renpy.python</string>
 		</dict>

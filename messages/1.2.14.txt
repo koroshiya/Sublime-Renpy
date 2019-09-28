@@ -1,0 +1,11 @@
+Sublime Renpy v1.2.14
+======================
+
+Bugfixes:
+
+Improvements:
+
+Changes:
+-Removed local copy of and dependency on Python.sublime-syntax. This no longer appears to be needed, as long as Sublime Text's bundled version of Python syntax is up to date.
+
+New:
