@@ -1,0 +1,12 @@
+Sublime Renpy v1.2.15
+======================
+
+Bugfixes:
+
+Improvements:
+-Replaced plugin with text snippets
+
+Changes:
+-Deleted RenpyTextTag plugin
+
+New:
