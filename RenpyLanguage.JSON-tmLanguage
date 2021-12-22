@@ -61,23 +61,18 @@
         {"include":"#style"},
 
         {
-
+            "begin": "^(\\s*)(layeredimage)(\\s+\\w+)+:",
+            "beginCaptures":{
+                "2":{"name":"keyword.control.flow.renpy"},
+                "3":{"name":"variable.renpy"}
+            },
             "patterns": [
-                {
-                    "begin": "^(\\s*)(layeredimage)(\\s+\\w+)+:",
-                    "beginCaptures":{
-                        "2":{"name":"keyword.control.flow.renpy"},
-                        "3":{"name":"variable.renpy"}
-                    },
-                    "patterns": [
-                        {"include": "#layeredimage"},
-                        {"include": "#atl"},
-                        {"include": "#source_python"}
-                    ],
-                    "end": "^(?!(\\1\\s+|\\s*#.*$))",
-                    "name": "source.renpy.layeredimage"
-                }
-            ]
+                {"include": "#layeredimage"},
+                {"include": "#atl"},
+                {"include": "#source_python"}
+            ],
+            "end": "^(?!(\\1\\s+|\\s*#.*$))",
+            "name": "source.renpy.layeredimage"
         },
 
         {"include":"#transform"},
@@ -128,7 +123,11 @@
         "source_python":{
             "comment": "Context for python statements + Renpy autocompletes",
             "name": "source.renpy.python",
-            "include": "source.python"
+            "patterns": [
+                {
+                    "include": "source.python"
+                }
+            ]
         },
         "default":{
             "comment": "Default context",

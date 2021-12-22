@@ -155,43 +155,38 @@
 			<string>#style</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>^(\s*)(layeredimage)(\s+\w+)+:</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.flow.renpy</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.renpy</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^(?!(\1\s+|\s*#.*$))</string>
+			<key>name</key>
+			<string>source.renpy.layeredimage</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>begin</key>
-					<string>^(\s*)(layeredimage)(\s+\w+)+:</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.control.flow.renpy</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>variable.renpy</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>^(?!(\1\s+|\s*#.*$))</string>
-					<key>name</key>
-					<string>source.renpy.layeredimage</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#layeredimage</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#atl</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#source_python</string>
-						</dict>
-					</array>
+					<key>include</key>
+					<string>#layeredimage</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#atl</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#source_python</string>
 				</dict>
 			</array>
 		</dict>
@@ -637,10 +632,15 @@
 		<dict>
 			<key>comment</key>
 			<string>Context for python statements + Renpy autocompletes</string>
-			<key>include</key>
-			<string>source.python</string>
 			<key>name</key>
 			<string>source.renpy.python</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
+				</dict>
+			</array>
 		</dict>
 		<key>string_quoted_backtick</key>
 		<dict>
