@@ -638,7 +638,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>source.python</string>
+					<string>source.python.compat</string>
 				</dict>
 			</array>
 		</dict>
