@@ -1,0 +1,12 @@
+Sublime Renpy v1.2.16
+======================
+
+Bugfixes:
+-Reintroduced compat version of Python sublime-syntax because a change in ST4's packaged version of that syntax appears to have broken Sublime Renpy
+
+Improvements:
+-Added sublime-syntax file for better performance/compatibility in new versions of Sublime Text
+
+Changes:
+
+New:
