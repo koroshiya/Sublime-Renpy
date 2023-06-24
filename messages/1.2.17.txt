@@ -1,0 +1,11 @@
+Sublime Renpy v1.2.17
+======================
+
+Bugfixes:
+
+Improvements:
+-Added support for init number python blocks without a leading plus or minus
+
+Changes:
+
+New:
