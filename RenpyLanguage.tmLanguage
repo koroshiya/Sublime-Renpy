@@ -200,7 +200,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\h*)init(\s+)((\+|\-)\d+\s+)?python((\s+)(\w*))?:(\s*)$</string>
+			<string>^(\h*)init(\s+)((\+|\-)?\d+\s+)?python((\s+)(\w*))?:(\s*)$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -231,7 +231,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\h*)(init)(\s+(\+|\-)\d+)?(\s+\w*)?\s*:\s*$</string>
+			<string>^(\h*)(init)(\s+(\+|\-)?\d+)?(\s+\w*)?\s*:\s*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>

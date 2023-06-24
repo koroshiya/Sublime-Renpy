@@ -80,7 +80,7 @@
         {"include": "#python_block"},
 
         {
-            "begin": "^(\\h*)init(\\s+)((\\+|\\-)\\d+\\s+)?python((\\s+)(\\w*))?:(\\s*)$",
+            "begin": "^(\\h*)init(\\s+)((\\+|\\-)?\\d+\\s+)?python((\\s+)(\\w*))?:(\\s*)$",
             "beginCaptures":{
                 "0":{"name":"keyword.control.flow.renpy"}
             },
@@ -94,7 +94,7 @@
         },
 
         {
-            "begin": "^(\\h*)(init)(\\s+(\\+|\\-)\\d+)?(\\s+\\w*)?\\s*:\\s*$",
+            "begin": "^(\\h*)(init)(\\s+(\\+|\\-)?\\d+)?(\\s+\\w*)?\\s*:\\s*$",
             "beginCaptures":{
                 "0":{"name":"keyword.control.flow.renpy"}
             },

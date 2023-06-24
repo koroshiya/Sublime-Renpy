@@ -61,7 +61,7 @@ contexts:
         - include: source_python
     - include: transform
     - include: python_block
-    - match: ^(\h*)init(\s+)((\+|\-)\d+\s+)?python((\s+)(\w*))?:(\s*)$
+    - match: ^(\h*)init(\s+)((\+|\-)?\d+\s+)?python((\s+)(\w*))?:(\s*)$
       captures:
         0: keyword.control.flow.renpy
       push:
@@ -71,7 +71,7 @@ contexts:
         - include: python
         - include: python_init
         - include: source_python
-    - match: ^(\h*)(init)(\s+(\+|\-)\d+)?(\s+\w*)?\s*:\s*$
+    - match: ^(\h*)(init)(\s+(\+|\-)?\d+)?(\s+\w*)?\s*:\s*$
       captures:
         0: keyword.control.flow.renpy
       push:
