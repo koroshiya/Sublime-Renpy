@@ -27,26 +27,18 @@ contexts:
         - include: python_block
         - include: python_line
         - include: source_python
-    - match: '^(\h*)(screen)(\s+)(\w+)(\s*)(\(.*\))?(\s*):'
+    - match: '^(\h*)(screen)(\s+)(\w+)(\s*)'
       captures:
-        2: keyword.control.flow.renpy
-        4: variable.renpy
+        2: storage.type.function.renpy
+        4: entity.name.function.renpy
       push:
-        - meta_scope: source.renpy.screen
         - match: ^(?!(\1\s+|\s*#.*$))
           pop: true
-        - match: '^(\s*)(imagemap)(\s*):'
-          captures:
-            2: keyword.control.flow.renpy
-          push:
-            - match: ^(?!(\1\s+|\s*#.*$))
-              pop: true
-            - include: imagemap
-        - include: transform
-        - include: screen
-        - include: python_block
-        - include: python_line
-        - include: source_python
+        - match: ':'
+          push: screen_scope
+        - match: '(?=\()'
+          push: [screen_scope, python_parameters_scope]
+
     - include: style
     - match: '^(\s*)(layeredimage)(\s+\w+)+:'
       captures:
@@ -88,6 +80,27 @@ contexts:
         - include: source_python
     - include: define
     - include: default
+    - include: source_python
+  python_parameters_scope:
+    - include: scope:source.python.compat#line-continuation-or-pop
+    - match: \(
+      scope: meta.function.parameters.python punctuation.section.parameters.begin.python
+      set: [scope:source.python.compat#function-parameters, scope:source.python.compat#allow-unpack-operators]
+  screen_scope:
+    - meta_scope: source.renpy.screen
+    - match: ^(?!(\1\s+|\s*#.*$))
+      pop: true
+    - match: '^(\s*)(imagemap)(\s*):'
+      captures:
+        2: keyword.control.flow.renpy
+      push:
+        - match: ^(?!(\1\s+|\s*#.*$))
+          pop: true
+        - include: imagemap
+    - include: transform
+    - include: screen
+    - include: python_block
+    - include: python_line
     - include: source_python
   atl:
     - match: \b(insensitive_|idle_|hover_|selected_|selected_idle_|selected_hover_)?(alt|xpos|ypos|pos|xanchor|yanchor|anchor|xalign|yalign|align|xcenter|ycenter|xoffset|yoffset|xmaximum|ymaximum|maximum|xminimum|yminimum|minimum|xsize|ysize|xysize|xfill|yfill|area|antialias|adjust_spacing|black_color|bold|caret|color|first_indent|font|size|italic|justify|kerning|language|layout|line_leading|line_overlap_split|line_spacing|min_width|newline_indent|outlines|rest_indent|ruby_style|slow_cps|slow_cps_multiplier|strikethrough|text_align|underline|hyperlink_functions|vertical|hinting|background|foreground|left_margin|right_margin|xmargin|top_margin|bottom_margin|ymargin|left_padding|right_padding|xpadding|top_padding|bottom_padding|ypadding|size_group|child|hover_sound|activate_sound|mouse|focus_mask|keyboard_focus|bar_vertical|bar_invert|bar_resizing|left_gutter|right_gutter|top_gutter|bottom_gutter|left_bar|right_bar|top_bar|bottom_bar|thumb|thumb_shadow|thumb_offset|mouse|unscrollable|keyboard_focus|spacing|first_spacing|box_reverse|box_wrap|order_reverse|selected|sensitive|keysym|alternate_keysym|arrowkeys|mousewheel|padding|properties|scrollbars|draggable|side_xfill|side_yfill|xadjustment|yadjustment|scrollbar_thumb|transclude|rows|cols|xinitial|yinitial|base_bar)\b
