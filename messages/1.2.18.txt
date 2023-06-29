@@ -1,0 +1,14 @@
+Sublime Renpy v1.2.18
+======================
+
+Bugfixes:
+
+Improvements:
+-Added syntax highlighting for screen arguments*
+
+Changes:
+
+New:
+
+
+*This will only work on Sublime Text 4, or Sublime Text 3 build 3084 or newer
